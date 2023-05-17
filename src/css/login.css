@@ -1,0 +1,209 @@
+/* Estilos generales para la pagina */
+
+html,
+body {
+     height: 100%;
+     margin: 0;
+     padding: 0;
+}
+
+header {
+     padding: 10px;
+     margin: 0;
+     background-color: rgb(43, 43, 40);
+}
+
+footer {
+     background-color: rgb(43, 43, 40);
+     color: white;
+     height: 2.5%;
+     bottom: 0;
+}
+
+section {
+     min-height: 82%;
+     align-items: center;
+}
+
+.container-row {
+     display: flex;
+     flex-direction: row;
+     margin: 1%;
+}
+
+.container-col {
+     display: flex;
+     flex-direction: column;
+     margin: 1%;
+}
+
+button,
+input,
+a {
+     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el navBar */
+.navbar {
+     align-items: center;
+     justify-content: space-between;
+}
+
+.logo {
+     width: 10%;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+}
+
+.logo a {
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     color: white;
+}
+
+.logo a:hover {
+     color: #104C72;
+}
+
+.logo img {
+     width: 30px;
+     height: 30px;
+     margin-right: 10px;
+}
+
+
+.pages-indixes {
+     width: 40%;
+     color: white;
+     display: flex;
+     justify-content: space-around;
+}
+
+.pages-indixes a {
+     text-decoration: none;
+     color: white;
+}
+
+.pages-indixes a:hover {
+     color: #104C72;
+}
+
+.pages-indixes a[href="#form-login"] {
+     font-weight: bold;
+     color: #273CCB;
+}
+
+.pages-indixes a[href="#form-login"]:hover {
+     color: #192381;
+}
+
+
+/* Estilos para el formulario de Iniciar Sesion */
+
+#form-login {
+     max-width: 400px;
+     margin: 0 auto;
+     padding: 40px;
+     background-color: #ffffff;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forms {
+     margin: 0 auto;
+     align-items: center;
+     justify-content: center;
+}
+
+.forms h2 {
+     text-align: center;
+     font-size: 24px;
+     margin-bottom: 20px;
+     color: #333333;
+}
+
+.buttons {
+     gap: 25px 0;
+}
+
+#form-login label {
+     display: block;
+     margin-bottom: 5px;
+}
+
+#form-login input[type="text"],
+#form-login input[type="password"] {
+     width: 95%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos de los botones de Iniciar Sesion */
+
+#form-login input[type="submit"] {
+     background-color: #273CCB;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+#form-login input[type="submit"]:hover {
+     background-color: #192381;
+}
+
+#form-register input[type="submit"]:active {
+     background-color: #3e8e41;
+}
+
+/* Estilos de los botones de Iniciar Sesion con Facebook */
+
+#facebook-button {
+     background-color: #3b5998;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 16px;
+}
+
+#facebook-button:hover {
+     background-color: #2d4373;
+}
+
+#facebook-button:active {
+     background-color: #192381;
+}
+
+/* Estilos de los botones de Iniciar Sesion con Google */
+
+#google-button {
+     background-color: #db4a39;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 16px;
+}
+
+#google-button:hover {
+     background-color: #c53727;
+}
+
+#google-button:active {
+     background-color: #a82d1f;
+}
