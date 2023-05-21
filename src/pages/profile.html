@@ -21,7 +21,7 @@
                     <a href="">Busqueda </a>
                     <a href="">Mentores </a>
                     <a href="">Mentorias </a>
-                    <a href="#profile">Mi Perfil &nbsp; <i class="fa-regular fa-user fa-lg"></i></a>
+                    <a href="#show-information">Mi Perfil &nbsp; <i class="fa-regular fa-user fa-lg"></i></a>
                </div>
           </div>
      </header>
@@ -49,12 +49,21 @@
                               por aprender nuevas tecnologías y herramientas que me permitan crear soluciones
                               innovadoras y eficientes.
                          </p>
+                         <h3>Habilidades</h3>
+                         <ul>
+                              <li>Programación</li>
+                              <li>Estructuras de datos y algoritmos</li>
+                              <li>Desarrollo web</li>
+                              <li>Bases de datos</li>
+                              <li>Sistemas operativos</li>
+                         </ul>
                     </div>
                </div>
           </section>
           <section id="edit-information">
                <h1>Editar Información</h1>
-               <form>
+
+               <form class="container-col">
                     <div class="form-group">
                          <label for="name">Nombre:</label>
                          <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
@@ -67,7 +76,33 @@
                          <label for="bio">Biografía:</label>
                          <textarea id="bio" name="bio" placeholder="Ingrese una breve biografía" required></textarea>
                     </div>
+
                     <div class="form-group">
+                         <label for="skills">Habilidades:</label>
+                         <div class="radio-group">
+                              <input type="checkbox" id="programming" name="skills" value="programming">
+                              <label for="programming">Programación</label><br>
+                              <input type="checkbox" id="data_structures" name="skills" value="data_structures">
+                              <label for="data_structures">Estructuras de datos y algoritmos</label><br>
+                              <input type="checkbox" id="web_development" name="skills" value="web_development">
+                              <label for="web_development">Desarrollo web</label><br>
+                              <input type="checkbox" id="database" name="skills" value="database">
+                              <label for="database">Bases de datos</label><br>
+                              <input type="checkbox" id="operating_systems" name="skills" value="operating_systems">
+                              <label for="operating_systems">Sistemas operativos</label><br>
+                              <input type="checkbox" id="network_security" name="skills" value="network_security">
+                              <label for="network_security">Redes y seguridad</label><br>
+                              <input type="checkbox" id="ai_ml" name="skills" value="ai_ml">
+                              <label for="ai_ml">Inteligencia artificial y aprendizaje automático</label><br>
+                              <input type="checkbox" id="problem_solving" name="skills" value="problem_solving">
+                              <label for="problem_solving">Resolución de problemas</label><br>
+                              <input type="checkbox" id="teamwork" name="skills" value="teamwork">
+                              <label for="teamwork">Trabajo en equipo</label><br>
+                              <input type="checkbox" id="continuous_learning" name="skills" value="continuous_learning">
+                              <label for="continuous_learning">Aprendizaje continuo</label><br>
+                         </div>
+                    </div>
+                    <div class="form-submit ">
                          <button type="submit">Guardar</button>
                     </div>
                </form>
