@@ -1,10 +1,12 @@
 /* Estilos generales para la pagina */
 
-html,
 body {
-     height: 100%;
      margin: 0;
      padding: 0;
+     font-family: Arial, sans-serif;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
 }
 
 header {
@@ -12,14 +14,6 @@ header {
      margin: 0;
      background-color: rgb(43, 43, 40);
 }
-
-footer {
-     background-color: rgb(43, 43, 40);
-     color: white;
-     height: 2.5%;
-     bottom: 0;
-}
-
 section {
      min-height: 82%;
      align-items: center;
@@ -208,4 +202,17 @@ input[type="password"]:hover {
 
 #google-button:active {
      background-color: #a82d1f;
+}
+
+/* Estilos para el footer */
+footer {
+     background-color: #333;
+     color: #fff;
+     padding: 20px;
+     text-align: center;
+     margin-top: auto;
+}
+
+footer span {
+     font-size: 14px;
 }

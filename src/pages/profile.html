@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/profile.css">
+     <title>Profile</title>
+</head>
+<script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
+
+<body>
+     <header>
+          <div class="navbar container-row">
+               <div class="logo">
+                    <a href=""><img src="../assets/logo.png" alt="logo-ProMentoring" id="logo"></a>
+                    <h1>ProMentoring</h1>
+               </div>
+               <div class="pages-indixes">
+                    <a href="">Busqueda </a>
+                    <a href="">Mentores </a>
+                    <a href="">Mentorias </a>
+                    <a href="#profile">Mi Perfil &nbsp; <i class="fa-regular fa-user fa-lg"></i></a>
+               </div>
+          </div>
+     </header>
+     <main>
+          <section id="show-information">
+               <h1>Informacion General</h1>
+               <div class="container-row">
+                    <div class="container-col picture">
+                         <img src="../assets/profile.jfif" alt="profile-picture">
+                    </div>
+                    <div class="container-col info">
+                         <h2>Martina Jimenez</h2>
+                         <h3>Estudiante de Ciencias de la Computacion</h3>
+                         <p>
+                              Soy una apasionada estudiante de Ciencias de la Computación en busca de desafíos y
+                              oportunidades para expandir mis conocimientos en el campo de la tecnología. Mi objetivo
+                              principal es adquirir una base sólida en los fundamentos de la programación y las ciencias
+                              de la computación, mientras me enfoco en el desarrollo de software y la resolución de
+                              problemas.
+                         </p>
+                         <p>
+                              Durante mi trayecto académico, he adquirido habilidades en varios lenguajes de
+                              programación como Java, Python y C++. Además, tengo experiencia en el desarrollo de
+                              aplicaciones web utilizando tecnologías como HTML, CSS y JavaScript. Estoy entusiasmado
+                              por aprender nuevas tecnologías y herramientas que me permitan crear soluciones
+                              innovadoras y eficientes.
+                         </p>
+                    </div>
+               </div>
+          </section>
+          <section id="edit-information">
+               <h1>Editar Información</h1>
+               <form>
+                    <div class="form-group">
+                         <label for="name">Nombre:</label>
+                         <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="major">Carrera:</label>
+                         <input type="text" id="major" name="major" placeholder="Ingrese su carrera" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="bio">Biografía:</label>
+                         <textarea id="bio" name="bio" placeholder="Ingrese una breve biografía" required></textarea>
+                    </div>
+                    <div class="form-group">
+                         <button type="submit">Guardar</button>
+                    </div>
+               </form>
+          </section>
+     </main>
+     <footer>
+          <div>
+               <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
+          </div>
+     </footer>
+</body>
+
+</html>
