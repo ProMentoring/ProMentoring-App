@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/busqueda.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar container-row">
+            <div class="logo">
+                <a href=""><img src="../assets/logo.png" alt="logo-ProMentoring" id="logo"></a>
+                <h1>ProMentoring</h1>
+            </div>
+            <div class="pages-indixes">
+                <a href="busqueda.html">Busqueda</a>
+                <a href="">Mentores</a>
+                <a href="">Mentorias</a>
+                <a href="login.html">Iniciar Sesion</a>
+                <a href="register.html">Registrarse</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <h2 class="titulo">Búsqueda de mentores expertos en programación</h2>
+        <div class="container-row busqueda">
+            <div class="container-col ">
+                <div class="filter">
+                    <label>Habilidades:</label>
+                    <span class="arrow-icon">▼</span>
+                </div>
+                <div class="checkbox-group">
+                    <div class="elemento">
+                        <input type="checkbox" id="c++" value="c++">
+                        <label for="c++">C++</label>
+                    </div>
+                    <div class="elemento">
+                        <input type="checkbox" id="javascript" value="javascript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
+                    <div class="elemento">
+                        <input type="checkbox" id="python" value="python">
+                        <label for="python">Python</label>
+                    </div>
+                    <div class="elemento">
+                        <input type="checkbox" id="sql" value="sql">
+                        <label for="sql">SQL</label>
+                    </div>
+                    <div class="elemento">
+                        <input type="checkbox" id="perl" value="perl">
+                        <label for="perl">Perl</label>
+                    </div>
+                    <div class="elemento">
+                        <input type="checkbox" id="csharp" value="csharp">
+                        <label for="csharp">C#</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container-col">
+                <div class="filter">
+                    <label>Precios:</label>
+                    <span class="arrow-icon">▼</span>
+                </div>
+                <div class="checkbox-group">
+                    <div class="container-row precios">
+                        <div class="container-col">
+                            <label for="precio-menor" class="precio">Precio menor:</label>
+                            <input type="number" id="precio-menor" min="0" class="price-input">
+                        </div>
+                        <div class="container-col">
+                            <label for="precio-mayor" class="precio">Precio mayor:</label>
+                            <input type="number" id="precio-mayor" min="0" class="price-input">
+                        </div>
+                    </div>
+                    <p>Todos los precios en soles</p>
+                </div>
+            </div>
+            <div class="container-col">
+                <div class="filter">
+                    <label>Modalidad:</label>
+                    <span class="arrow-icon">▼</span>
+                </div>
+                <div class="checkbox-group">
+                    <div class="elemento">
+                        <input type="checkbox">
+                        <label for="grupal">Grupal</label>
+                    </div>
+                    <div class="elemento">
+                        <input type="checkbox">
+                        <label for="individual">Individual</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
+        </div>
+    </footer>
+</body>
+
+</html>

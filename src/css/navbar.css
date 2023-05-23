@@ -1,0 +1,85 @@
+/* Estilos generales para la pagina */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(43, 43, 40);
+}
+
+section {
+    min-height: 82%;
+    align-items: center;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+button,
+input,
+a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el navBar */
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo a:hover {
+    color: #104C72;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.pages-indixes {
+    width: 40%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pages-indixes a {
+    text-decoration: none;
+    color: white;
+}
+
+.pages-indixes a:hover {
+    color: #104C72;
+}
