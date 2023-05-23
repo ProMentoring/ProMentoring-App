@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(43, 43, 40);
+}
+section {
+    min-height: 100%;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+/* Estilos para el navBar */
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 10%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo a:hover {
+    color: #104C72;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.pages-indixes {
+    width: 40%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pages-indixes a {
+    text-decoration: none;
+    color: white;
+}
+
+.pages-indixes a:hover {
+    color: #104C72;
+}
+
+.pages-indixes a[href="#form-register"] {
+    font-weight: bold;
+    color: #273CCB;
+}
+
+.pages-indixes a[href="#form-register"]:hover {
+    color: #192381;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    padding: 0px 1%;
+    justify-content: space-between;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer span {
+    font-size: 14px;
+}
+
+/* Estilos titulo */
+.container-titulo{
+    display: inline-block;
+    border-radius: 10px 10px 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 4% auto;
+    padding: 0px 5%;
+}
+.container-titulo h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Estilos de la tarjeta sesion*/
+.sesiones{
+    justify-content: space-around;
+}
+.sesion-card{
+    padding: 0px;
+    margin: 1% 0%;
+    width: 20%;
+}
+.sesion-card .titulo{
+    background-color: #84A9D0;
+    border-color: #D9D9D9;
+    border-radius: 10px 10px 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0px 20px;
+    text-align: center;
+}
+.sesion-card .descripcion{
+    background-color: #ffffff;
+    border-color: #D9D9D9;
+    border-radius: 0px 0px 10px 10px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px 20px;
+}
+.descripcion .container-col li, a, p{
+    font-size: 18px;
+    padding: 10px 0px;
+}
