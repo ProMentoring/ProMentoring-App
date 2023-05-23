@@ -17,6 +17,7 @@ section {
     padding: 0px;
     margin: 0px;
 }
+
 /* Estilos para el navBar */
 .navbar {
     align-items: center;
@@ -104,6 +105,7 @@ footer span {
     border-style: solid;
     margin: 4% auto;
     padding: 0px 5%;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1);
 }
 .container-titulo h1{
     text-align: center;
@@ -136,6 +138,7 @@ footer span {
     border-width: 1px;
     border-style: solid;
     padding: 5px 20px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 }
 .descripcion .container-col li, a, p{
     font-size: 18px;
