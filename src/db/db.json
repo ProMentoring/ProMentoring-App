@@ -1,0 +1,31 @@
+{
+     "users": [
+          {
+               "id": 1,
+               "user": "pedrito123",
+               "password": "pedrito123",
+               "email": "pedrito@gmail.com"
+          },
+          {
+               "id": 2,
+               "user": "juan03",
+               "password": "123",
+               "email": "juan@gmail.com"
+          },
+          {
+               "id": 3,
+               "user": "gabe321",
+               "password": "123456",
+               "email": "gabe@gmail.com"
+          },
+          {
+               "id": 4,
+               "user": "test123",
+               "password": "test123",
+               "email": "test@gmail.com"
+          }
+     ],
+     "others":[
+          
+     ]
+}
