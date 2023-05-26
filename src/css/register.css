@@ -14,6 +14,7 @@ header {
      margin: 0;
      background-color: rgb(43, 43, 40);
 }
+
 section {
      min-height: 82%;
      align-items: center;
@@ -78,6 +79,8 @@ a {
 .pages-indixes a {
      text-decoration: none;
      color: white;
+     padding: 1.5%;
+
 }
 
 .pages-indixes a:hover {
@@ -91,77 +94,6 @@ a {
 
 .pages-indixes a[href="#form-register"]:hover {
      color: #192381;
-}
-
-
-/* Estilos para el formulario de Registrarse */
-
-#form-register {
-     max-width: 400px;
-     margin: 0 auto;
-     padding: 40px;
-     background-color: #ffffff;
-     border: 1px solid #ccc;
-     border-radius: 8px;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.forms {
-     margin: 0 auto;
-     align-items: center;
-     justify-content: center;
-}
-
-.forms h2 {
-     text-align: center;
-     font-size: 24px;
-     margin-bottom: 20px;
-     color: #333333;
-}
-
-.buttons {
-     gap: 25px 0;
-}
-
-#form-register label {
-     display: block;
-     margin-bottom: 5px;
-}
-
-#form-register input[type="text"],
-#form-register input[type="email"],
-#form-register input[type="password"] {
-     width: 95%;
-     padding: 8px;
-     margin-bottom: 10px;
-     border: 1px solid #ccc;
-     border-radius: 4px;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover {
-     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Estilos de los botones de Registro */
-
-#form-register input[type="submit"] {
-     background-color: #273CCB;
-     color: #fff;
-     padding: 10px 20px;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-}
-
-#form-register input[type="submit"]:hover {
-     background-color: #192381;
-}
-
-#form-register input[type="submit"]:active {
-     background-color: #3e8e41;
 }
 
 /* Estilos de los botones de Iniciar Sesion con Facebook */
@@ -204,6 +136,121 @@ input[type="password"]:hover {
      background-color: #a82d1f;
 }
 
+/* Estilos para el formulario de Registrarse */
+
+#form-register {
+     max-width: 400px;
+     margin: 2% 1.5% 2% 1.5%; 
+     padding: 40px;
+     background-color: #ffffff;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forms {
+     margin: 0 auto;
+     align-items: center;
+     justify-content: center;
+}
+
+.forms h2 {
+     text-align: center;
+     font-size: 24px;
+     margin-bottom: 20px;
+     color: #333333;
+}
+
+.buttons {
+     gap: 25px 0;
+}
+
+#form-register label {
+     display: block;
+     margin-bottom: 5px;
+}
+
+#form-register input[type="text"],
+#form-register input[type="email"],
+#form-register input[type="password"],
+#form-register select[id="rol"] {
+     width: 98%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+select:hover {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el checkbox de condiciones */
+
+#form-register .container-row {
+     align-items: flex-start;
+     justify-content: space-around;
+}
+
+#form-register .container-row label {
+     font-size: 12px;
+     text-align: justify;
+     padding: 0 0 0 2%;
+}
+
+
+/* Estilos de los botones de Registro */
+
+#form-register input[type="submit"] {
+     background-color: #273CCB;
+     color: #fff;
+     padding: 10px 20px;
+     margin: 10px auto 10px auto;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+#form-register input[type="submit"]:hover {
+     background-color: #192381;
+}
+
+#form-register input[type="submit"]:active {
+     background-color: #3e8e41;
+}
+
+#form-login .container-row a {
+     color: #3E5DCC;
+     text-align: end;
+     width: 60%;
+     text-decoration: none;
+}
+
+#form-login .container-row a:hover {
+     color: #192381;
+}
+
+/* Estilos para los mensajes de error */
+
+.error {
+     border: 2px solid red;
+}
+
+.error-message {
+     color: red;
+     display: none;
+}
+
+.show {
+     display: block;
+     margin: 2% 2% 5% 2%;
+}
+
+
+
 /* Estilos para el footer */
 footer {
      background-color: #333;
@@ -215,4 +262,65 @@ footer {
 
 footer span {
      font-size: 14px;
+}
+
+
+
+/* Media Query para pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+     .navbar .container-row {
+          flex-direction: column;
+     }
+
+     .navbar {
+          align-items: flex-start;
+     }
+
+     .logo {
+          width: 100%;
+          justify-content: space-evenly;
+          margin-bottom: 10px;
+     }
+
+     .logo a {
+          min-width: 10%;
+     }
+
+     .pages-indixes {
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-bottom: 10px;
+     }
+
+     #form-register {
+          max-width: 100%;
+     }
+
+     #form-register .container-row {
+          align-items: flex-start;
+          min-width: 100%;
+     }
+
+}
+
+/* Media Query para pantallas de hasta 768px de ancho */
+@media (max-width: 850px) {
+     header .container-row {
+          flex-direction: column;
+     }
+
+     .logo {
+          width: 100%;
+          margin-bottom: 10px;
+     }
+
+     .pages-indixes {
+          width: 100%;
+          margin-bottom: 10px;
+     }
+
+     #form-register {
+          max-width: 100%;
+     }
 }

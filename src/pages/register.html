@@ -8,6 +8,7 @@
      <title>Registrarse</title>
      <link rel="stylesheet" href="../css/register.css">
 </head>
+<script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
 
 <body>
      <header>
@@ -19,8 +20,8 @@
                <div class="pages-indixes">
                     <a href="">Busqueda</a>
                     <a href="">Mentores</a>
-                    <a href="">Mentorias</a>
-                    <a href="">Iniciar Sesion</a>
+                    <a href="sesion.html">Mentorias</a>
+                    <a href="login.html">Iniciar Sesion</a>
                     <a href="#form-register">Registrarse</a>
                </div>
           </div>
@@ -29,20 +30,55 @@
           <div class="forms container-col">
                <h2>Registrarse gratis para empezar con las mentorias</h2>
                <div class="buttons container-col">
-                    <button id="facebook-button">Iniciar sesión con Facebook</button>
-                    <button id="google-button">Iniciar sesión con Google</button>
+                    <button id="facebook-button"><i class="fa-brands fa-facebook fa-lg"></i> Iniciar sesión con
+                         Facebook</button>
+                    <button id="google-button"><i class="fa-brands fa-google-plus-g fa-lg"></i> Iniciar sesión con
+                         Google</button>
                </div>
                <form id="form-register">
-                    <label for="nombre">Nombre de Usuario:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <div class="container-col">
+                         <label for="email">¿Cual es tu email?</label>
+                         <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                         <label for="user">Nombre de Usuario</label>
+                         <input type="text" id="user" name="user" placeholder="Introduce tu nombre de usuario" required>
 
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" required>
+                         <label for="names">Nombres</label>
+                         <input type="text" id="names" name="names" placeholder="Introduce tus nombres" required>
 
-                    <input type="submit" value="Registrarse">
+                         <label for="lastname">Apellidos</label>
+                         <input type="text" id="lastname" name="lastname" placeholder="Introduce tus apellidos"
+                              required>
+
+                         <label for="password">Crea una contraseña</label>
+                         <input type="password" id="password" name="password" placeholder="Introduce tu contraseña"
+                              required>
+
+                         <label for="passwordConfirm">Confirmar contraseña</label>
+                         <input type="password" id="passwordConfirm" name="passwordConfirm"
+                              placeholder="Introduce de nuevo tu contraseña" required>
+                         <span class="error-message" id="errorPassword"></span>
+
+                         <label for="rol">Rol Academico</label>
+                         <select name="rol" id="rol">
+                              <option value="">Selecciona tu rol academico</option>
+                              <option value="estudiante">Estudiante</option>
+                              <option value="mentor">Profesor</option>
+                         </select>
+
+                         <div class="container-row">
+                              <input type="checkbox" id="conditions" name="conditions" value="accept" required>
+                              <label for="conditions">Al registrarte, aceptas los Términos y Condiciones de Uso de Pro
+                                   Mentoring</label><br>
+                         </div>
+
+                         <input type="submit" value="Registrarse">
+
+                         <div class="container-row">
+                              <span> ¿Ya tiene cuenta?</span>
+                              <a href="login.html">Inicia sesion</a>
+                         </div>
+                    </div>
                </form>
 
           </div>
@@ -52,6 +88,8 @@
                <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
           </div>
      </footer>
+     <script src="../js/register.js"></script>
+
 </body>
 
 </html>

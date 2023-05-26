@@ -1,31 +1,50 @@
 {
-     "users": [
-          {
-               "id": 1,
-               "user": "pedrito123",
-               "password": "pedrito123",
-               "email": "pedrito@gmail.com"
-          },
-          {
-               "id": 2,
-               "user": "juan03",
-               "password": "123",
-               "email": "juan@gmail.com"
-          },
-          {
-               "id": 3,
-               "user": "gabe321",
-               "password": "123456",
-               "email": "gabe@gmail.com"
-          },
-          {
-               "id": 4,
-               "user": "test123",
-               "password": "test123",
-               "email": "test@gmail.com"
-          }
-     ],
-     "others":[
-          
-     ]
+  "users": [
+    {
+      "user": "gabe10",
+      "names": "Gabriel Esteban",
+      "lastname": "Gavilan Torres",
+      "password": "123",
+      "email": "gabe@gmail.com",
+      "rol": "estudiante",
+      "id": 1
+    },
+    {
+      "user": "test123",
+      "names": "Alex ",
+      "lastname": "Merino Montaña",
+      "password": "12345",
+      "email": "test@gmail.com",
+      "rol": "mentor",
+      "id": 2
+    },
+    {
+      "user": "rodrigo321",
+      "names": "Rodrigo Simon",
+      "lastname": "Valtazar Ceres",
+      "password": "rodrigo123",
+      "email": "rodrigo@gmail.com",
+      "rol": "estudiante",
+      "id": 3
+    },
+    {
+      "user": "pedritoNoPedrito",
+      "names": "Pedro Norman",
+      "lastname": "Cesares Zen",
+      "password": "123",
+      "email": "pedrito@gmail.com",
+      "rol": "mentor",
+      "id": 4
+    },
+    {
+      "user": "gabe03",
+      "names": "Carlos Tiba",
+      "lastname": "Silva Maldonado",
+      "password": "123",
+      "email": "carlos@gmail.com",
+      "rol": "estudiante",
+      "id": 5
+    }
+  ],
+  "others": []
 }
