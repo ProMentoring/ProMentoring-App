@@ -18,9 +18,8 @@
                     <h1>ProMentoring</h1>
                </div>
                <div class="pages-indixes">
-                    <a href="">Busqueda </a>
-                    <a href="">Mentores </a>
-                    <a href="">Mentorias </a>
+                    <a href="busqueda.html">Busqueda </a>
+                    <a href="sesion.html">Mentorias </a>
                     <a href="#show-information">Mi Perfil &nbsp; <i class="fa-regular fa-user fa-lg"></i></a>
                </div>
           </div>
@@ -32,78 +31,69 @@
                     <div class="container-col picture">
                          <img src="../assets/profile.jfif" alt="profile-picture">
                     </div>
-                    <div class="container-col info">
-                         <h2>Martina Jimenez</h2>
-                         <h3>Estudiante de Ciencias de la Computacion</h3>
-                         <p>
-                              Soy una apasionada estudiante de Ciencias de la Computación en busca de desafíos y
-                              oportunidades para expandir mis conocimientos en el campo de la tecnología. Mi objetivo
-                              principal es adquirir una base sólida en los fundamentos de la programación y las ciencias
-                              de la computación, mientras me enfoco en el desarrollo de software y la resolución de
-                              problemas.
-                         </p>
-                         <p>
-                              Durante mi trayecto académico, he adquirido habilidades en varios lenguajes de
-                              programación como Java, Python y C++. Además, tengo experiencia en el desarrollo de
-                              aplicaciones web utilizando tecnologías como HTML, CSS y JavaScript. Estoy entusiasmado
-                              por aprender nuevas tecnologías y herramientas que me permitan crear soluciones
-                              innovadoras y eficientes.
-                         </p>
-                         <h3>Habilidades</h3>
-                         <ul>
-                              <li>Programación</li>
-                              <li>Estructuras de datos y algoritmos</li>
-                              <li>Desarrollo web</li>
-                              <li>Bases de datos</li>
-                              <li>Sistemas operativos</li>
-                         </ul>
-                    </div>
+                    <div class="container-col info" id="infoDiv"> </div>
                </div>
           </section>
           <section id="edit-information">
                <h1>Editar Información</h1>
 
-               <form class="container-col">
+               <form class="container-col" id="info-user" method="dialog">
                     <div class="form-group">
-                         <label for="name">Nombre:</label>
-                         <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+                         <label for="names">Nombre:</label>
+                         <input type="text" id="names" name="names" placeholder="Ingrese sus nombres" required>
                     </div>
+
                     <div class="form-group">
-                         <label for="major">Carrera:</label>
-                         <input type="text" id="major" name="major" placeholder="Ingrese su carrera" required>
+                         <label for="lastname">Apellidos:</label>
+                         <input type="text" id="lastname" name="lastname" placeholder="Ingrese sus apellidos" required>
                     </div>
+
+                    <div class="form-group">
+                         <label for="career">Carrera:</label>
+                         <input type="text" id="career" name="career" placeholder="Ingrese su carrera" required>
+                    </div>
+
                     <div class="form-group">
                          <label for="bio">Biografía:</label>
-                         <textarea id="bio" name="bio" placeholder="Ingrese una breve biografía" required></textarea>
+                         <textarea id="bio" name="bio" rows="10" cols="50" placeholder="Ingrese una breve biografía"
+                              required></textarea>
                     </div>
 
                     <div class="form-group">
                          <label for="skills">Habilidades:</label>
-                         <div class="radio-group">
-                              <input type="checkbox" id="programming" name="skills" value="programming">
+                         <div class="radio-group" id="skill-list">
+                              <input type="checkbox" id="programming" name="skills" value="Programación">
                               <label for="programming">Programación</label><br>
-                              <input type="checkbox" id="data_structures" name="skills" value="data_structures">
+                              <input type="checkbox" id="data_structures" name="skills"
+                                   value="Estructuras De Datos Y Algoritmos">
                               <label for="data_structures">Estructuras de datos y algoritmos</label><br>
-                              <input type="checkbox" id="web_development" name="skills" value="web_development">
+                              <input type="checkbox" id="web_development" name="skills" value="Desarrollo Web">
                               <label for="web_development">Desarrollo web</label><br>
-                              <input type="checkbox" id="database" name="skills" value="database">
+                              <input type="checkbox" id="database" name="skills" value="Bases De Datos">
                               <label for="database">Bases de datos</label><br>
-                              <input type="checkbox" id="operating_systems" name="skills" value="operating_systems">
+                              <input type="checkbox" id="operating_systems" name="skills" value="Sistemas Operativos">
                               <label for="operating_systems">Sistemas operativos</label><br>
-                              <input type="checkbox" id="network_security" name="skills" value="network_security">
+                              <input type="checkbox" id="network_security" name="skills" value="Redes Y Deguridad">
                               <label for="network_security">Redes y seguridad</label><br>
-                              <input type="checkbox" id="ai_ml" name="skills" value="ai_ml">
+                              <input type="checkbox" id="ai_ml" name="skills"
+                                   value="Inteligencia Artificial Y Aprendizaje Automático">
                               <label for="ai_ml">Inteligencia artificial y aprendizaje automático</label><br>
-                              <input type="checkbox" id="problem_solving" name="skills" value="problem_solving">
+                              <input type="checkbox" id="problem_solving" name="skills" value="Resolución De Problemas">
                               <label for="problem_solving">Resolución de problemas</label><br>
-                              <input type="checkbox" id="teamwork" name="skills" value="teamwork">
+                              <input type="checkbox" id="teamwork" name="skills" value="Trabajo En Equipo">
                               <label for="teamwork">Trabajo en equipo</label><br>
-                              <input type="checkbox" id="continuous_learning" name="skills" value="continuous_learning">
+                              <input type="checkbox" id="continuous_learning" name="skills"
+                                   value="Aprendizaje Continuo">
                               <label for="continuous_learning">Aprendizaje continuo</label><br>
                          </div>
                     </div>
-                    <div class="form-submit ">
-                         <button type="submit">Guardar</button>
+                    <div class="form-group insert">
+                         <label for="insert-skills">Ingrese otra habilidad</label>
+                         <input type="text" id="insert-skills" name="insert-skills" placeholder="Ingrese un habilidad">
+                         <button class="disabled" type="button" disabled>Insertar habilidad</button>
+                    </div>
+                    <div class="form-submit">
+                         <button type="submit" form="info-user" id="submit-info">Guardar</button>
                     </div>
                </form>
           </section>
@@ -113,6 +103,8 @@
                <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
           </div>
      </footer>
+     <script src="../js/profile.js"></script>
+
 </body>
 
 </html>

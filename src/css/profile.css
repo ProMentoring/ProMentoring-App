@@ -187,6 +187,8 @@ a {
      padding: 40px;
 }
 
+/* Estilos para el formulario */
+
 #edit-information .container-col {
      background-color: #f9f9f9;
      padding: 20px;
@@ -206,9 +208,19 @@ a {
      padding-left: 25px;
 }
 
-form {
-     max-width: 100%;
+#info-user {
      margin: 0 auto;
+}
+
+form {
+     margin: 0 auto;
+     max-width: 100%;
+     margin: 2% 1.5% 2% 1.5%;
+     padding: 40px;
+     background-color: #ffffff;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -232,6 +244,20 @@ textarea {
      font-size: 16px;
      border: 1px solid #ccc;
      border-radius: 4px;
+}
+
+input[type="text"],
+#bio{
+     width: 98%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+}
+
+input[type="text"]:hover,
+#bio:hover {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 button[type="submit"] {
@@ -270,6 +296,48 @@ button[type="submit"] {
      text-align: center;
 }
 
+/* Estilos para el insertar */
+.insert button {
+     display: inline-block;
+     padding: 10px 20px;
+     margin: 1.5% auto;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 4px;
+     border: none;
+     -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+     -moz-transition: background-color 0.3s ease, color 0.3s ease;
+     -ms-transition: background-color 0.3s ease, color 0.3s ease;
+     -o-transition: background-color 0.3s ease, color 0.3s ease;
+     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.disabled {
+     background-color: gray;
+}
+
+.show {
+     cursor: pointer;
+     background-color: #273CCB;
+}
+
+.insert button:hover {
+     background-color: #192381;
+}
+
+/* Estilos para la caja de texto */
+.insert input[type="text"] {
+     width: 100%;
+     padding: 8px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+}
+
+
+/* Estilos para el submit cambios */
+
 button[type="submit"] {
      background-color: #104C72;
      color: #fff;
@@ -296,4 +364,66 @@ footer {
 
 footer span {
      font-size: 14px;
+}
+
+/* Estilos adicionales para hacer la página responsiva */
+
+@media screen and (max-width: 768px) {
+     /* Estilos para dispositivos con un ancho máximo de 768px */
+
+     .logo {
+          width: 100%;
+          justify-content: center;
+          padding-bottom: 2.5%;
+     }
+
+     .pages-indixes {
+          width: 60%;
+          font-size: 14px;
+     }
+
+     .container-row {
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+     }
+
+     .container-col {
+          width: 90%;
+          margin: 5% 0;
+     }
+
+     #show-information .container-row {
+          flex-direction: column;
+     }
+
+     #show-information .picture img {
+          width: 70%;
+     }
+
+     #show-information .info {
+          width: 100%;
+     }
+
+     #edit-information {
+          padding: 20px;
+     }
+}
+
+@media screen and (max-width: 480px) {
+     /* Estilos para dispositivos con un ancho máximo de 480px */
+
+     .logo {
+          width: 50%;
+          align-items: center;
+     }
+
+     .pages-indixes {
+          width: 80%;
+          font-size: 12px;
+     }
+
+     #show-information .picture img {
+          width: 80%;
+     }
 }
