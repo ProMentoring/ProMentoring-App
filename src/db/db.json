@@ -6,7 +6,12 @@
       "lastname": "Gavilan Torres",
       "password": "123",
       "email": "gabe@gmail.com",
-      "rol": "estudiante",
+      "rol": "Estudiante",
+      "career": "Ingenieria De Software",
+      "bio": " No se",
+      "skills": [
+        "Programación"
+      ],
       "id": 1
     },
     {
@@ -15,7 +20,12 @@
       "lastname": "Merino Montaña",
       "password": "12345",
       "email": "test@gmail.com",
-      "rol": "mentor",
+      "rol": "Mentor",
+      "career": "Ingenieria De Software",
+      "bio": " Hola Mundo. :D",
+      "skills": [
+        "Programación"
+      ],
       "id": 2
     },
     {
@@ -24,7 +34,14 @@
       "lastname": "Valtazar Ceres",
       "password": "rodrigo123",
       "email": "rodrigo@gmail.com",
-      "rol": "estudiante",
+      "rol": "Estudiante",
+      "career": "Ciencias De La Computacion",
+      "bio": " Testeando la biografia.",
+      "skills": [
+        "Resolución De Problemas",
+        "Trabajo En Equipo",
+        "Aprendizaje Continuo"
+      ],
       "id": 3
     },
     {
@@ -33,18 +50,32 @@
       "lastname": "Cesares Zen",
       "password": "123",
       "email": "pedrito@gmail.com",
-      "rol": "mentor",
+      "rol": "Mentor",
+      "career": "Ingenieria De Software",
+      "bio": " Durante mi trayecto académico, he adquirido habilidades en varios lenguajes de programación como Java, Python y C++. Además, tengo experiencia en el desarrollo de aplicaciones web utilizando tecnologías como HTML, CSS y JavaScript. Estoy entusiasmado por aprender nuevas tecnologías y herramientas que me permitan crear soluciones innovadoras y eficientes.",
+      "skills": [
+        "Programación",
+        "Estructuras De Datos Y Algoritmos",
+        "Desarrollo Web"
+      ],
       "id": 4
     },
     {
       "user": "gabe03",
-      "names": "Carlos Tiba",
+      "names": "Lucia Maria",
       "lastname": "Silva Maldonado",
       "password": "123",
       "email": "carlos@gmail.com",
-      "rol": "estudiante",
+      "rol": "Estudiante",
+      "career": "Ciencias de la Computacion",
+      "bio": "Soy una apasionada estudiante de Ciencias de la Computación en busca de desafíos y oportunidades para expandir mis conocimientos en el campo de la tecnología. Mi objetivo principal es adquirir una base sólida en los fundamentos de la programación y las ciencias de la computación, mientras me enfoco en el desarrollo de software y la resolución de problemas.",
+      "skills": [
+        "Programación",
+        "Estructuras De Datos Y Algoritmos",
+        "Redes Y Deguridad",
+        "Machine Learning"
+      ],
       "id": 5
     }
-  ],
-  "others": []
+  ]
 }

@@ -92,6 +92,9 @@ form.addEventListener('submit', (event) => {
                password: password,
                email: email,
                rol: rol,
+               career: '',
+               bio: '',
+               skills: [],
           };
 
           // Llamada a la API mediante fetch y enviar el objeto
@@ -116,7 +119,8 @@ form.addEventListener('submit', (event) => {
 
 // Agregar eventos de escucha 
 
-// Para la validacion de contraseña y confirmación de contraseña
+// Obtener los usuarios desde el JSON
 getUsers();
+// Para la validacion de contraseña y confirmación de contraseña
 passwordInput.addEventListener('input', validatePassword);
 passwordConfirmInput.addEventListener('input', validatePassword);
