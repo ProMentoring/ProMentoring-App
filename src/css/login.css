@@ -139,7 +139,7 @@ a {
 
 #form-login {
      max-width: 400px;
-     margin: 2% auto 2%;
+     margin: 2% 1.5% 2% 1.5%;
      padding: 40px;
      background-color: #ffffff;
      border: 1px solid #ccc;
@@ -170,7 +170,7 @@ a {
 }
 
 #form-login input[type="text"],
-#form-login input[type="password"]{
+#form-login input[type="password"] {
      width: 95%;
      padding: 8px;
      margin-bottom: 10px;
@@ -179,8 +179,7 @@ a {
 }
 
 input[type="text"]:hover,
-input[type="password"]:hover
-{
+input[type="password"]:hover {
      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -237,23 +236,34 @@ footer span {
      }
 
      .logo {
-          width: 100%;
+          min-width: 100%;
+          justify-content: space-evenly;
           margin-bottom: 10px;
+     }
+
+     .logo a {
+          min-width: 10%;
      }
 
      .pages-indixes {
           width: 100%;
+          flex-wrap: wrap;
+          justify-content: space-between;
           margin-bottom: 10px;
      }
 
-     #form-login {
+     #form-logim {
           max-width: 100%;
+     }
+     #form-login .container-row {
+          align-items: flex-start;
+          min-width: 100%;
      }
 }
 
 /* Media Query para pantallas de hasta 768px de ancho */
 @media (max-width: 850px) {
-     .container-row {
+     header .container-row {
           flex-direction: column;
      }
 
@@ -267,7 +277,7 @@ footer span {
           margin-bottom: 10px;
      }
 
-     #form-login {
+     #form-login{
           max-width: 100%;
      }
 }
