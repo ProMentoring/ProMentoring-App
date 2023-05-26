@@ -1,0 +1,66 @@
+.titulo {
+    text-align: center;
+    padding: 2% 0px;
+    font-size: 30px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+.container-row.busqueda{
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.filter{
+    background-color: #9CBAD1;
+    border-radius: 6px;
+    border-width: 2px;
+    width: 40%;
+    border-style: solid;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.checkbox-group{
+    background-color: #9CBAD1;
+    min-width: 400px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+.elemento {
+    display: block;
+    padding: 5px;
+}
+
+.container-row.precios {
+    justify-content: space-between;
+}
+
+.precio{
+    padding-bottom: 10px;
+}
+
+.checkbox-group p{
+    text-align: center;
+}
+
+.price-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+    font-size: 14px;
+}
+
+.price-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
