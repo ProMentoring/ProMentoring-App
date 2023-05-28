@@ -8,10 +8,16 @@ let users = [];
 // Funcion para obtener los usuarios de una API
 
 const getUsers = () => {
-     fetch('http://localhost:3000/users')
+     fetch('http://localhost:3000/students')
           .then((response) => response.json())
           .then((data) => {
                users = data;
+          })
+          .catch((error) => alert(error));
+     fetch('http://localhost:3000/mentors')
+          .then((response) => response.json())
+          .then((data) => {
+               users.push(data);
           })
           .catch((error) => alert(error));
 }
@@ -24,7 +30,8 @@ document.getElementById("form-login").addEventListener("submit", function (event
      const username = user.value;
      const password = contrasena.value;
 
-     const foundUser = users.find((u) => (u.user === username || u.email === username) && u.password === password);
+     const foundUser = users.find((u) => (u.user === username || u.email === username)
+          && u.password === password);
 
      if (foundUser) {
           // Redirigir a otra página con los datos incluidos en la URL
