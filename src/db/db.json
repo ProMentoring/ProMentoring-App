@@ -61,8 +61,10 @@
         "Python",
         "Php"
       ],
-      "price": "190",
-      "modality": "Grupal"
+      "price": "80",
+      "modalities": [
+        "Individual"
+      ]
     },
     {
       "name": "Carlos Ramirez",
@@ -79,8 +81,11 @@
         "Swift",
         "Dart"
       ],
-      "price": "190",
-      "modality": "Individual"
+      "price": "40",
+      "modalities": [
+        "Individual",
+        "Grupal"
+      ]
     },
     {
       "name": "Maria Lopez",
@@ -97,8 +102,10 @@
         "Angular",
         "JavaScript"
       ],
-      "price": "190",
-      "modality": "Individual"
+      "price": "50",
+      "modalities": [
+        "Grupal"
+      ]
     },
     {
       "name": "Daniel Torres",
@@ -115,8 +122,10 @@
         "Node",
         "Html"
       ],
-      "price": "190",
-      "modality": "Grupal"
+      "price": "60",
+      "modalities": [
+        "Individual"
+      ]
     }
   ]
 }
