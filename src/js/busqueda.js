@@ -3,8 +3,8 @@ const checkboxGroup = document.querySelectorAll(".checkbox-group input[type='che
 const precioMenorInput = document.querySelector("#precio-menor");
 const precioMayorInput = document.querySelector("#precio-mayor");
 
-precioMenorInput.addEventListener("input", () => fetchMentors);
-precioMayorInput.addEventListener("input", () => fetchMentors);
+precioMenorInput.addEventListener("input", () => fetchMentors());
+precioMayorInput.addEventListener("input", () => fetchMentors());
 
 const selectedFilters = [];
 let mentors = [];
@@ -99,6 +99,7 @@ const filterMentorsAndShow = () => {
     );
     // Comprueba si hay coincidencia en el rango de precios
     const matchedPrice = mentor.price >= minPrice && mentor.price <= maxPrice;
+
     // Devuelve true si hay coincidencia en habilidades, modalidades o precios
     return matchedSkills || matchedModalities || matchedPrice;
   });
