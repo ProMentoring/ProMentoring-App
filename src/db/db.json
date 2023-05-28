@@ -77,14 +77,21 @@
       "id": 5
     }
   ],
-  "mentors":[
+  "mentors": [
     {
       "id":1,
-      "photo": "/assets/photo-mentor.jpg",
-      "names": "Juan Carlos",
+      "names": "Juan Ortiz",
       "lastname": "Ortiz Vega",
-      "skills":[
-        "Full Stack Web Developer"
+      "speciality": "Full stack Web Developer",
+      "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+      "icons": [
+        "fa-python",
+        "fa-database",
+        "fa-php"
+      ],
+      "skills": [
+        "Python",
+        "Php"
       ],
       "description" : "Hola soy Juan Carlos Ortiz Vega. Me especializo en el desarrollo full stack de sitios web. Me encanta programar y me encanta ayudar a las personas a aprender a programar. He estado programando profesionalmente durante más de ocho años. He estado enseñando a la gente a programar durante más de cinco años. Además, cuando enseño, me gusta revisor los problemas con los que se encuentran mis alumnos para poder ayudarlos y brindarles una retroalimentación sobre su trabajo.",
       "Reseñas":[
@@ -99,14 +106,26 @@
           "review" : "La mentoría de programación con el profesor superó todas mis expectativas. Sus explicaciones claras y ejemplos prácticos me ayudaron a comprender los conceptos de programación de una manera mucho más profunda. Su pasión por la materia y su compromiso con nuestros éxitos individuales nos motivó a todos a esforzarnos y superar nuestros límites. Sin duda, recomendaría esta mentoría a cualquier persona que esté buscando mejorar sus habilidades en programación y desee contar con el apoyo de un mentor experimentado."
         }
       ]
+      "price": "80",
+      "modalities": [
+        "Individual"
+      ]
     },
     {
       "id":2,
-      "photo": "/assets/photo-mentor.jpg",
-      "names": "Ana Maria",
+      "names": "Carlos Ramirez",
       "lastname": "Lopez Campos",
-      "skills":[
-        "Inteligencia Artificial"
+      "speciality": "Senior iOS Developer",
+      "photo": "https://media.licdn.com/dms/image/C4D03AQGY9TGpHbptXg/profile-displayphoto-shrink_200_200/0/1621468147852?e=1691020800&v=beta&t=jjkyJ9cn6or9M-VF5afOlxreDpfioQ0NwUZRcI1GPU8",
+      "icons": [
+        "fa-android",
+        "fa-swift",
+        "fa-apple"
+      ],
+      "skills": [
+        "Flutter",
+        "Swift",
+        "Dart"
       ],
       "description" : "Soy una profesora apasionada y dedicada especializada en Inteligencia Artificial (IA). Con una sólida formación académica en Ciencias de la Computación y una destacada trayectoria profesional en el campo, poseo un amplio conocimiento teórico y habilidades prácticas en programación y IA. Mi enfoque se centra en el aprendizaje basado en la experiencia y la aplicación práctica de los conceptos. Mi objetivo es inspirar a mis alumnos, proporcionándoles las herramientas y conocimientos actualizados para desarrollar soluciones inteligentes y creativas utilizando algoritmos de IA y aprendizaje automático. Estoy comprometida a apoyar su crecimiento profesional y ayudarles a enfrentar los desafíos de la IA en esta industria en constante evolución.",
       "Reseñas":[
@@ -121,26 +140,70 @@
           "review" : "No puedo expresar con palabras lo valiosa que fue la mentoría con la profesora. Aprendí más en unas pocas semanas de mentoría que en meses de estudio autodidacta. El profesor demostró un profundo conocimiento en programación y compartió con nosotros ejemplos prácticos que nos permitieron aplicar lo que aprendíamos. Fue un verdadero cambio de juego para mi carrera en desarrollo de software."
         }
       ]
-    }
-  ],
-  "cards":[
-    {
-      "id": 1,
-      "number": "1111-2222-3333-4444",
-      "name" : "Renzo Espíritu",
-      "month" : 1,
-      "year" : 2025,
-      "cvv" : 888,
-      "cash" : 1000
+      "price": "40",
+      "modalities": [
+        "Individual",
+        "Grupal"
+      ]
     },
     {
-      "id": 2,
-      "number": "9999-8888-7777-6666",
-      "name" : "María Vega",
-      "month" : 5,
-      "year" : 2027,
-      "cvv" : 555,
-      "cash" : 100
-    }
+      "id":3,
+      "names": "Maria Lopez",
+      "speciality": "Senior Sofware Engineer",
+      "photo": "https://media.licdn.com/dms/image/C4E03AQEw44XNwPZdaw/profile-displayphoto-shrink_200_200/0/1625762611009?e=1691020800&v=beta&t=VTe7xPDdlilzcp1jIV3vRXwxqcjMtB38X04vLf8Xk3c",
+      "icons": [
+        "fa-square",
+        "fa-react",
+        "fa-angular"
+      ],
+      "skills": [
+        "React",
+        "Angular",
+        "JavaScript"
+      ],
+      "price": "50",
+      "modalities": [
+        "Grupal"
+      ]
+    },
+    {
+      "id":4,
+      "names": "Daniel Torres",
+      "speciality": "Full-Stack Developer",
+      "photo": "https://media.licdn.com/dms/image/C4D03AQGC4RfuppQhng/profile-displayphoto-shrink_200_200/0/1654101837475?e=1691020800&v=beta&t=UzsqPLkSPuCTIk8qJOp3Bj0DnxMQgoTfWKrNTOqAW5E",
+      "icons": [
+        "fa-square",
+        "fa-node-js",
+        "fa-html5"
+      ],
+      "skills": [
+        "SQL",
+        "Node",
+        "Html"
+      ],
+      "price": "60",
+      "modalities": [
+        "Individual"
+      ]
+    },
+    "cards":[
+      {
+        "id": 1,
+        "number": "1111-2222-3333-4444",
+        "name" : "Renzo Espíritu",
+        "month" : 1,
+        "year" : 2025,
+        "cvv" : 888,
+        "cash" : 1000
+      },
+      {
+        "id": 2,
+        "number": "9999-8888-7777-6666",
+        "name" : "María Vega",
+        "month" : 5,
+        "year" : 2027,
+        "cvv" : 555,
+        "cash" : 100
+      }
   ]
 }

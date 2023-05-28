@@ -19,10 +19,11 @@
     margin: 0 auto;
 }
 
-
 .container-row.busqueda{
     align-items: start;
     justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .filter{
@@ -76,4 +77,93 @@
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para la sección "mentors" */
+#mentors {
+    padding: 20px;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+#mentors h2 {
+    font-size: 36px;
+    color: blue;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#mentors p {
+    font-size: 28px;
+    color: #666;
+    padding: 0px 0%;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+.mentors-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.mentor {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px;
+    margin: 20px;
+    width: auto;
+    height: auto;
+}
+
+.mentor img {
+    max-width: 30%;
+    margin: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-border-radius: 1.2%;
+    -moz-border-radius: 1.2%;
+    -ms-border-radius: 1.2%;
+    -o-border-radius: 1.2%;
+    border-radius: 1.2%;
+}
+
+.mentor-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mentor-items h3 {
+    font-size: 28px;
+    margin: 0px;
+}
+
+.mentor-content {
+    justify-content: space-around;
+}
+
+.mentor-items p {
+    font-size: 20px !important;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.mentor-items {
+    align-items: start;
+    justify-content: center;
+    width: 60%;
+}
+
+.icons {
+    justify-content: space-between;
+    gap: 50%;
 }
