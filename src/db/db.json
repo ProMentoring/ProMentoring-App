@@ -50,7 +50,7 @@
     {
       "name": "Juan Ortiz",
       "speciality": "Full stack Web Developer",
-      "imagen": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+      "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
       "icons": [
         "fa-python",
         "fa-database",
@@ -58,9 +58,8 @@
       ],
       "description": "lorem ipsum",
       "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "Python",
+        "Php"
       ],
       "price": "190",
       "modality": "Grupal"
@@ -68,7 +67,7 @@
     {
       "name": "Carlos Ramirez",
       "speciality": "Senior iOS Developer",
-      "imagen": "https://media.licdn.com/dms/image/C4D03AQGY9TGpHbptXg/profile-displayphoto-shrink_200_200/0/1621468147852?e=1691020800&v=beta&t=jjkyJ9cn6or9M-VF5afOlxreDpfioQ0NwUZRcI1GPU8",
+      "photo": "https://media.licdn.com/dms/image/C4D03AQGY9TGpHbptXg/profile-displayphoto-shrink_200_200/0/1621468147852?e=1691020800&v=beta&t=jjkyJ9cn6or9M-VF5afOlxreDpfioQ0NwUZRcI1GPU8",
       "icons": [
         "fa-android",
         "fa-swift",
@@ -76,9 +75,9 @@
       ],
       "description": "lorem ipsum",
       "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "Flutter",
+        "Swift",
+        "Dart"
       ],
       "price": "190",
       "modality": "Individual"
@@ -86,7 +85,7 @@
     {
       "name": "Maria Lopez",
       "speciality": "Senior Sofware Engineer",
-      "imagen": "https://media.licdn.com/dms/image/C4E03AQEw44XNwPZdaw/profile-displayphoto-shrink_200_200/0/1625762611009?e=1691020800&v=beta&t=VTe7xPDdlilzcp1jIV3vRXwxqcjMtB38X04vLf8Xk3c",
+      "photo": "https://media.licdn.com/dms/image/C4E03AQEw44XNwPZdaw/profile-displayphoto-shrink_200_200/0/1625762611009?e=1691020800&v=beta&t=VTe7xPDdlilzcp1jIV3vRXwxqcjMtB38X04vLf8Xk3c",
       "icons": [
         "fa-square",
         "fa-react",
@@ -94,8 +93,8 @@
       ],
       "description": "lorem ipsum",
       "skills": [
-        "HTML",
-        "CSS",
+        "React",
+        "Angular",
         "JavaScript"
       ],
       "price": "190",
@@ -104,7 +103,7 @@
     {
       "name": "Daniel Torres",
       "speciality": "Full-Stack Developer",
-      "imagen": "https://media.licdn.com/dms/image/C4D03AQGC4RfuppQhng/profile-displayphoto-shrink_200_200/0/1654101837475?e=1691020800&v=beta&t=UzsqPLkSPuCTIk8qJOp3Bj0DnxMQgoTfWKrNTOqAW5E",
+      "photo": "https://media.licdn.com/dms/image/C4D03AQGC4RfuppQhng/profile-displayphoto-shrink_200_200/0/1654101837475?e=1691020800&v=beta&t=UzsqPLkSPuCTIk8qJOp3Bj0DnxMQgoTfWKrNTOqAW5E",
       "icons": [
         "fa-square",
         "fa-node-js",
@@ -112,9 +111,9 @@
       ],
       "description": "lorem ipsum",
       "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "SQL",
+        "Node",
+        "Html"
       ],
       "price": "190",
       "modality": "Grupal"

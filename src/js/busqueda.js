@@ -1,6 +1,14 @@
 const mentorsList = document.getElementById("mentorsList");
+const checkboxGroup = document.querySelectorAll(".checkbox-group input[type='checkbox']");
 
+const precioMenorInput = document.querySelector("#precio-menor");
+const precioMayorInput = document.querySelector("#precio-mayor");
+const precioMenor = parseInt(precioMenorInput.value);
+const precioMayor = parseInt(precioMayorInput.value);
+
+const filtrosSeleccionados = [];
 let mentors = [];
+const listFilterMentors = [];
 
 const getMentors = ()=>{
     fetch("http://localhost:3000/mentors")
@@ -8,7 +16,8 @@ const getMentors = ()=>{
     .then(data => {
         mentors = data;
         //console.log(mentors);
-        showMentors(mentors);
+        filterMentors(mentors, filtrosSeleccionados);
+        //showMentorsFiltered(mentors, filtrosSeleccionados);
     })
     .catch((error) => console.error("Error", error));
 }
@@ -25,7 +34,7 @@ const showMentors = (mentors) => {
         mentorContainerRow.classList.add("mentor-content");
 
         const mentorImagen = document.createElement("img");
-        mentorImagen.src = mentor.imagen;
+        mentorImagen.src = mentor.photo;
         mentorImagen.alt = "No hay imagen";
 
         const mentorContainerColumn = document.createElement("div");
@@ -66,7 +75,44 @@ const showMentors = (mentors) => {
     });
 }
 
-const filterMentors = () =>{
-    
+const filterMentors = (mentors, filtros) => {
+    //Filtro por skill
+    mentors.forEach(mentor => {
+        let mentorMatched = false; // Variable para realizar un seguimiento de si se encontró una coincidencia para el mentor actual
+
+        mentor.skills.forEach(skill => {
+            filtros.forEach(filtro => {
+                if (skill.toLowerCase() === filtro.toLowerCase()) {
+                    listFilterMentors.push(mentor);
+                    mentorMatched = true; // Se encontró una coincidencia para el mentor actual
+                    return; // Romper el bucle interno
+                }
+            });
+
+            if (mentorMatched) {
+                return; // Romper el bucle externo si ya se encontró una coincidencia para el mentor actual
+            }
+        });
+
+        //if(mentor.modality.toLowerCase() === 
+    });
+    showMentors(listFilterMentors);
 }
-getMentors(); 
+
+const getFiltros = () =>{
+    checkboxGroup.forEach(checkbox => {
+        checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+                filtrosSeleccionados.push(checkbox.value);
+            } else {
+                const index = filtrosSeleccionados.indexOf(checkbox.value);
+                filtrosSeleccionados.splice(index, 1);
+            }
+
+            getMentors(mentors, filtrosSeleccionados);
+        });
+    });
+
+
+}
+getFiltros()
