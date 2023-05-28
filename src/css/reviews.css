@@ -55,7 +55,7 @@ nav h1,#navbar-right a{
 }
 
 #navbar-right{
-    width: 380px;
+    width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;

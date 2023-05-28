@@ -1,3 +1,16 @@
+/* Estilos para el navbar */
+
+.pages-indixes a[href="busqueda.html"] {
+    font-weight: bold;
+    color: #27acff;
+}
+
+.pages-indixes a[href="busqueda.html"]:hover {
+    color: #70bae9;
+}
+
+
+/* Estilos para  el contenido de la pagina*/
 .titulo {
     text-align: center;
     padding: 2% 0px;
