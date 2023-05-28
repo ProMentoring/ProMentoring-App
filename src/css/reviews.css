@@ -35,6 +35,7 @@ nav h1,#navbar-right a{
 #container-left-items{
     text-decoration: none;
     display: flex;
+    align-items: center;
     gap:10px;
 }
 
@@ -74,7 +75,7 @@ nav h1,#navbar-right a{
 /* DISEÑO AL CUERPO*/
 /* Presentación del mentor  */
 #mentor-profile{
-    height: 300px;
+    margin: 5px 0px;
     display: flex;
     align-items: center;
 }
@@ -113,4 +114,43 @@ nav h1,#navbar-right a{
 
 .commit{
     margin: 0px 5px 10px 5px;
+}
+
+@media (max-width: 600px){
+    #container-left-items > h1{
+        display: none;
+    }
+}
+
+@media (max-width: 799px){
+    #navbar-left{
+        width: auto;
+        margin: 0 5px;
+    }
+    section{
+        margin: 0 5px;
+    }
+    #mentor-profile{
+        flex-direction: column;
+    }
+    #mentor{
+        margin: 5px;
+    }
+    #presentación-mentor{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #presentación-mentor > p{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (min-width:800px) and (max-width: 1024px){
+    section{
+        margin: 0 50px;
+    }
 }
