@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/ingresoCV.css">
+     <link rel="stylesheet" href="../css/navbar.css">
+     <link rel="stylesheet" href="../css/footer.css">
+     <title>CV</title>
+</head>
+<script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
+
+<body>
+     <header>
+          <div class="navbar container-row">
+               <div class="logo">
+                    <a href="../../../ProMentoring-Landing-Page/src/index.html"><img src="../assets/logo.png"
+                              alt="logo-ProMentoring" id="logo"></a>
+                    <h1>ProMentoring</h1>
+               </div>
+               <div class="pages-indixes">
+                    <a href="busqueda.html">Busqueda </a>
+                    <a href="sesion.html">Mentorias </a>
+                    <a href="profile.html">Mi Perfil &nbsp; <i class="fa-regular fa-user fa-lg"></i></a>
+               </div>
+          </div>
+     </header>
+     <main>
+          <section id="show-information">
+               <div class="container-row">
+                    <div class="container-col picture">
+                         <img src="../assets/profile2.jpg" alt="profile-picture">
+                    </div>
+                    <div class="container-col info" id="infoDiv"> </div>
+               </div>
+          </section>
+          <section id="edit-information">
+               <h1>Ingreso de Curriculum Vitae</h1>
+               <form action="">
+                    <div class="container-col form-group" id="info-user" method="dialog">
+                         <div>
+                              <label for="CV"><strong>Adjunte su CV:</strong></label>
+                              <input type="file" name="CV" id="CV">
+                         </div>
+                    </div>
+                    <div class="form-group">
+                         <label for="time"><strong>Ingrese sus horarios
+                                   disponibles:</strong></label>
+                         <input id="Lunes" type="checkbox" name="day" value="Lunes"><label for="Lunes">Lunes</label>
+                         <input id="Martes" type="checkbox" name="day" value="Martes"><label for="Martes">Martes</label>
+                         <input id="Miercoles" type="checkbox" name="day" value="Miercoles"><label
+                              for="Miercoles">Miercoles</label>
+                         <input id="Jueves" type="checkbox" name="day" value="Jueves"><label for="Jueves">Jueves</label>
+                         <input id="Viernes" type="checkbox" name="day" value="Viernes"><label
+                              for="Viernes">Viernes</label>
+                         <input id="Sabado" type="checkbox" name="day" value="Sabado"><label for="Sabado">Sabado</label>
+                         <input id="Domingo" type="checkbox" name="day" value="Domingo"><label
+                              for="Domingo">Domingo</label>
+                         <input type="time" name="time" id="time">
+                    </div>
+                    <div class="form-group">
+                         <label for="Ingreso de modalidad a dictar"><strong>Ingreso de modalidad a
+                                   dictar:</strong></label>
+                         <input id="Grupal" type="radio" name="modalidad" value="Grupal"><label
+                              for="Grupal">Grupal</label>
+                         <input id="Individual" type="radio" name="modalidad" value="Individual"><label
+                              for="Individual">Individual</label>
+                    </div>
+                    <div class="form-group">
+                         <label for="Ingrese el costo de sus mentorias"><strong>Ingrese el costo de sus
+                                   mentorias:</strong></label>
+                         <label>$</label><input type="number" name="costoxmentoria" id="costoxmentoria"><label for="costoxmentoria">cada
+                              hora</label>
+                    </div>
+                    <div class="form-submit">
+                         <button type="submit" form="info-user" id="submit-info">Guardar</button>
+                    </div>
+               </form>
+          </section>
+     </main>
+     <footer>
+          <div>
+               <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
+          </div>
+     </footer>
+     <script src="../js/ingresoCV.js"></script>
+
+</body>
+
+</html>

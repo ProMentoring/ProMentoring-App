@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type= "text/css" href="/css/payments.css">
-    <title>HU 8 9 10</title>
+    <link rel="stylesheet" type="text/css" href="../css/payments.css">
+    <title>Página de Pagos</title>
 </head>
+
 <body>
     <header>
-        <img src="/assets/logo.png" alt="PROMENTORING" >
+        <a href="../../../ProMentoring-Landing-Page/src/index.html"><img src="../assets/logo.png"
+                alt="PROMENTORING"></a>
         <h1>ProMentoring</h1>
     </header>
     <section>
@@ -28,60 +31,62 @@
         <br>
         <div>
             <p>Número de tarjeta </p>
-            <input id = "input1" class="group1" type="text" placeholder="Introduce solo número">
+            <input id="input1" class="group1" type="text" placeholder="Introduce solo número">
             <p>Nombre del titular</p>
-            <input id = "input2" class="group1" type="text" placeholder="Introduce el nombre impreso de la tarjeta">
+            <input id="input2" class="group1" type="text" placeholder="Introduce el nombre impreso de la tarjeta">
             <div id="options">
                 <div>
-                <p>Mes</p>
-                <select class="group2">
-                    <option value="">MM</option>
-                    <option value="1">01</option>
-                    <option value="2">02</option>
-                    <option value="3">03</option>
-                    <option value="4">04</option>
-                    <option value="5">05</option>
-                    <option value="6">06</option>
-                    <option value="7">07</option>
-                    <option value="8">08</option>
-                    <option value="9">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
+                    <p>Mes</p>
+                    <select name="month" id="month" class="group2">
+                        <option value="">MM</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
                 </div>
                 <div>
-                <p>Año</p>
-                <select class="group2">
-                    <option value="">AA</option>
-                    <option value="2023">23</option>
-                    <option value="2024">24</option>
-                    <option value="2025">25</option>
-                    <option value="2026">26</option>
-                    <option value="2027">27</option>
-                    <option value="2028">28</option>
-                    <option value="2029">29</option>
-                    <option value="2030">30</option>
-                    <option value="2031">31</option>
-                    <option value="2032">32</option>
-                    <option value="2033">33</option>
-                    <option value="2034">34</option>
-                </select>
+                    <p>Año</p>
+                    <select name="year" id="year" class="group2">
+                        <option value="">AA</option>
+                        <option value="2023">23</option>
+                        <option value="2024">24</option>
+                        <option value="2025">25</option>
+                        <option value="2026">26</option>
+                        <option value="2027">27</option>
+                        <option value="2028">28</option>
+                        <option value="2029">29</option>
+                        <option value="2030">30</option>
+                        <option value="2031">31</option>
+                        <option value="2032">32</option>
+                        <option value="2033">33</option>
+                        <option value="2034">34</option>
+                    </select>
                 </div>
                 <div>
-                <p>CVV</p>
-                <input class="group2" type="text" placeholder="CVV">
+                    <p>CVV</p>
+                    <input id="cvv" class="group2" type="text" placeholder="CVV">
                 </div>
             </div>
-            <div id = "send">
+            <div id="send">
                 <div id="end-price">
                     <h1>Suscripción Anual</h1>
                     <span>S/240</span>
                 </div>
                 <button id="submit" type="submit">Comprar ahora</button>
+                <span id="msg-submit"></span>
             </div>
         </div>
     </section>
-
+    <script src="../js/payments.js"></script>
 </body>
+
 </html>

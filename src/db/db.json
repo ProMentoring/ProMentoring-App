@@ -6,7 +6,12 @@
       "lastname": "Gavilan Torres",
       "password": "123",
       "email": "gabe@gmail.com",
-      "rol": "estudiante",
+      "rol": "Estudiante",
+      "career": "Ingenieria De Software",
+      "bio": " No se",
+      "skills": [
+        "Programación"
+      ],
       "id": 1
     },
     {
@@ -15,7 +20,12 @@
       "lastname": "Merino Montaña",
       "password": "12345",
       "email": "test@gmail.com",
-      "rol": "mentor",
+      "rol": "Mentor",
+      "career": "Ingenieria De Software",
+      "bio": " Hola Mundo. :D",
+      "skills": [
+        "Programación"
+      ],
       "id": 2
     },
     {
@@ -24,7 +34,14 @@
       "lastname": "Valtazar Ceres",
       "password": "rodrigo123",
       "email": "rodrigo@gmail.com",
-      "rol": "estudiante",
+      "rol": "Estudiante",
+      "career": "Ciencias De La Computacion",
+      "bio": " Testeando la biografia.",
+      "skills": [
+        "Resolución De Problemas",
+        "Trabajo En Equipo",
+        "Aprendizaje Continuo"
+      ],
       "id": 3
     },
     {
@@ -33,22 +50,38 @@
       "lastname": "Cesares Zen",
       "password": "123",
       "email": "pedrito@gmail.com",
-      "rol": "mentor",
+      "rol": "Mentor",
+      "career": "Ingenieria De Software",
+      "bio": " Durante mi trayecto académico, he adquirido habilidades en varios lenguajes de programación como Java, Python y C++. Además, tengo experiencia en el desarrollo de aplicaciones web utilizando tecnologías como HTML, CSS y JavaScript. Estoy entusiasmado por aprender nuevas tecnologías y herramientas que me permitan crear soluciones innovadoras y eficientes.",
+      "skills": [
+        "Programación",
+        "Estructuras De Datos Y Algoritmos",
+        "Desarrollo Web"
+      ],
       "id": 4
     },
     {
       "user": "gabe03",
-      "names": "Carlos Tiba",
+      "names": "Lucia Maria",
       "lastname": "Silva Maldonado",
       "password": "123",
       "email": "carlos@gmail.com",
-      "rol": "estudiante",
+      "rol": "Estudiante",
+      "career": "Ciencias de la Computacion",
+      "bio": "Soy una apasionada estudiante de Ciencias de la Computación en busca de desafíos y oportunidades para expandir mis conocimientos en el campo de la tecnología. Mi objetivo principal es adquirir una base sólida en los fundamentos de la programación y las ciencias de la computación, mientras me enfoco en el desarrollo de software y la resolución de problemas.",
+      "skills": [
+        "Programación",
+        "Estructuras De Datos Y Algoritmos",
+        "Desarrollo Web"
+      ],
       "id": 5
     }
   ],
   "mentors": [
     {
-      "name": "Juan Ortiz",
+      "id":1,
+      "names": "Juan Ortiz",
+      "lastname": "Ortiz Vega",
       "speciality": "Full stack Web Developer",
       "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
       "icons": [
@@ -56,18 +89,32 @@
         "fa-database",
         "fa-php"
       ],
-      "description": "lorem ipsum",
       "skills": [
         "Python",
         "Php"
       ],
+      "description" : "Hola soy Juan Carlos Ortiz Vega. Me especializo en el desarrollo full stack de sitios web. Me encanta programar y me encanta ayudar a las personas a aprender a programar. He estado programando profesionalmente durante más de ocho años. He estado enseñando a la gente a programar durante más de cinco años. Además, cuando enseño, me gusta revisor los problemas con los que se encuentran mis alumnos para poder ayudarlos y brindarles una retroalimentación sobre su trabajo.",
+      "Reseñas":[
+        {
+          "name" : "Gustavo Alonso",
+          "lastname": "Mendoza Gutierrez",
+          "review": "La mentoría de programación con el profesor fue una experiencia increíble. Su enfoque claro y conciso en la enseñanza de los conceptos más complejos me ayudó a comprenderlos de una manera que nunca antes había experimentado. Su paciencia y disposición para responder preguntas hizo que me sintiera apoyado y motivado durante todo el proceso. ¡Recomendaría esta mentoría a cualquiera que desee dar un impulso significativo a sus habilidades de programación!"
+        },
+        {
+          "name":"Ana Maria",
+          "lastname":"Silva Marquiño",
+          "review" : "La mentoría de programación con el profesor superó todas mis expectativas. Sus explicaciones claras y ejemplos prácticos me ayudaron a comprender los conceptos de programación de una manera mucho más profunda. Su pasión por la materia y su compromiso con nuestros éxitos individuales nos motivó a todos a esforzarnos y superar nuestros límites. Sin duda, recomendaría esta mentoría a cualquier persona que esté buscando mejorar sus habilidades en programación y desee contar con el apoyo de un mentor experimentado."
+        }
+      ]
       "price": "80",
       "modalities": [
         "Individual"
       ]
     },
     {
-      "name": "Carlos Ramirez",
+      "id":2,
+      "names": "Carlos Ramirez",
+      "lastname": "Lopez Campos",
       "speciality": "Senior iOS Developer",
       "photo": "https://media.licdn.com/dms/image/C4D03AQGY9TGpHbptXg/profile-displayphoto-shrink_200_200/0/1621468147852?e=1691020800&v=beta&t=jjkyJ9cn6or9M-VF5afOlxreDpfioQ0NwUZRcI1GPU8",
       "icons": [
@@ -75,12 +122,24 @@
         "fa-swift",
         "fa-apple"
       ],
-      "description": "lorem ipsum",
       "skills": [
         "Flutter",
         "Swift",
         "Dart"
       ],
+      "description" : "Soy una profesora apasionada y dedicada especializada en Inteligencia Artificial (IA). Con una sólida formación académica en Ciencias de la Computación y una destacada trayectoria profesional en el campo, poseo un amplio conocimiento teórico y habilidades prácticas en programación y IA. Mi enfoque se centra en el aprendizaje basado en la experiencia y la aplicación práctica de los conceptos. Mi objetivo es inspirar a mis alumnos, proporcionándoles las herramientas y conocimientos actualizados para desarrollar soluciones inteligentes y creativas utilizando algoritmos de IA y aprendizaje automático. Estoy comprometida a apoyar su crecimiento profesional y ayudarles a enfrentar los desafíos de la IA en esta industria en constante evolución.",
+      "Reseñas":[
+        {
+          "name" : "Juan Manrique",
+          "lastname": "Pañygua Faustino",
+          "review": "La mentoría con la profesora fue un verdadero regalo. Aunque estaba un poco intimidado al principio, su enfoque amigable y su habilidad para transmitir conocimientos me hicieron sentir cómodo desde el primer día. Además de aprender nuevos lenguajes y técnicas de programación, también adquirí habilidades de resolución de problemas y pensamiento lógico. Recomiendo encarecidamente esta mentoría a cualquiera que quiera dar un salto cuántico en su carrera en el ámbito de la programación."
+        },
+        {
+          "name":"Gabriela Susana",
+          "lastname":"Diaz Vera",
+          "review" : "No puedo expresar con palabras lo valiosa que fue la mentoría con la profesora. Aprendí más en unas pocas semanas de mentoría que en meses de estudio autodidacta. El profesor demostró un profundo conocimiento en programación y compartió con nosotros ejemplos prácticos que nos permitieron aplicar lo que aprendíamos. Fue un verdadero cambio de juego para mi carrera en desarrollo de software."
+        }
+      ]
       "price": "40",
       "modalities": [
         "Individual",
@@ -88,7 +147,8 @@
       ]
     },
     {
-      "name": "Maria Lopez",
+      "id":3,
+      "names": "Maria Lopez",
       "speciality": "Senior Sofware Engineer",
       "photo": "https://media.licdn.com/dms/image/C4E03AQEw44XNwPZdaw/profile-displayphoto-shrink_200_200/0/1625762611009?e=1691020800&v=beta&t=VTe7xPDdlilzcp1jIV3vRXwxqcjMtB38X04vLf8Xk3c",
       "icons": [
@@ -96,7 +156,6 @@
         "fa-react",
         "fa-angular"
       ],
-      "description": "lorem ipsum",
       "skills": [
         "React",
         "Angular",
@@ -108,7 +167,8 @@
       ]
     },
     {
-      "name": "Daniel Torres",
+      "id":4,
+      "names": "Daniel Torres",
       "speciality": "Full-Stack Developer",
       "photo": "https://media.licdn.com/dms/image/C4D03AQGC4RfuppQhng/profile-displayphoto-shrink_200_200/0/1654101837475?e=1691020800&v=beta&t=UzsqPLkSPuCTIk8qJOp3Bj0DnxMQgoTfWKrNTOqAW5E",
       "icons": [
@@ -116,7 +176,6 @@
         "fa-node-js",
         "fa-html5"
       ],
-      "description": "lorem ipsum",
       "skills": [
         "SQL",
         "Node",
@@ -126,6 +185,25 @@
       "modalities": [
         "Individual"
       ]
-    }
+    },
+    "cards":[
+      {
+        "id": 1,
+        "number": "1111-2222-3333-4444",
+        "name" : "Renzo Espíritu",
+        "month" : 1,
+        "year" : 2025,
+        "cvv" : 888,
+        "cash" : 1000
+      },
+      {
+        "id": 2,
+        "number": "9999-8888-7777-6666",
+        "name" : "María Vega",
+        "month" : 5,
+        "year" : 2027,
+        "cvv" : 555,
+        "cash" : 100
+      }
   ]
 }

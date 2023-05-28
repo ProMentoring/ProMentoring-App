@@ -28,8 +28,7 @@ document.getElementById("form-login").addEventListener("submit", function (event
 
      if (foundUser) {
           // Redirigir a otra página con los datos incluidos en la URL
-          let url = "profile.html" + "?user=" + encodeURIComponent(username)
-               + "&contrasena=" + encodeURIComponent(password);
+          let url = "profile.html" + "?user=" + encodeURIComponent(username);
           window.location.href = url;
      } else {
           alert("Usuario y/o contraseña incorrectos");
