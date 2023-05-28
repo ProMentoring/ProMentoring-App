@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type= "text/css" href="/css/payments.css">
-    <title>HU 8 9 10</title>
+    <title>Página de Pagos</title>
 </head>
 <body>
     <header>
-        <img src="/assets/logo.png" alt="PROMENTORING" >
+        <a href="../../../ProMentoring-Landing-Page/src/index.html"><img src="/assets/logo.png" alt="PROMENTORING" ></a>
         <h1>ProMentoring</h1>
     </header>
     <section>
@@ -34,7 +34,7 @@
             <div id="options">
                 <div>
                 <p>Mes</p>
-                <select class="group2">
+                <select id="month" class="group2">
                     <option value="">MM</option>
                     <option value="1">01</option>
                     <option value="2">02</option>
@@ -52,7 +52,7 @@
                 </div>
                 <div>
                 <p>Año</p>
-                <select class="group2">
+                <select id="year" class="group2">
                     <option value="">AA</option>
                     <option value="2023">23</option>
                     <option value="2024">24</option>
@@ -70,7 +70,7 @@
                 </div>
                 <div>
                 <p>CVV</p>
-                <input class="group2" type="text" placeholder="CVV">
+                <input id="cvv" class="group2" type="text" placeholder="CVV">
                 </div>
             </div>
             <div id = "send">
@@ -79,9 +79,10 @@
                     <span>S/240</span>
                 </div>
                 <button id="submit" type="submit">Comprar ahora</button>
+                <span id="msg-submit"></span>
             </div>
         </div>
     </section>
-
+    <script src="../js/payments.js"></script>
 </body>
 </html>

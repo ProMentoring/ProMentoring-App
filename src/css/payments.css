@@ -131,3 +131,35 @@ header>img{
     scale:1.1;
     font-size: 15px;
 }
+
+#msg-submit{
+    display: block;
+}
+
+@media (max-width:480px){
+    #method-payment{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    #options{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:799px){
+    body{
+        margin:10px 10px;
+    }
+    #method-payment > button{
+        padding: 0px;
+    }
+    #options{
+        justify-content: space-around;
+    }
+}
+
+@media (min-width:800px) and (max-width: 1024px){
+    body{
+        margin: 20px 80px;
+    }
+}
