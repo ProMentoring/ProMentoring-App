@@ -123,4 +123,25 @@ const addCheckboxEventListener = () =>{
         });
     });
 }
-addCheckboxEventListener()
+
+const redirectToMentorPage = (mentorArticle) => {
+  // Se obtiene el nombre del mentor del elemento h3 dentro del artículo
+  const mentorName = mentorArticle.querySelector("h3").textContent;
+  // Redirige a la página del mentor pasando su nombre como parámetro en la URL
+  window.location.href = `mentor.html?name=${encodeURIComponent(mentorName)}`;
+};
+
+const addClickEventToMentors = () => {
+  mentorsList.addEventListener("click", event => {
+    // Verifica si se hizo clic en un artículo
+    if (event.target.closest(".mentor")) {
+      // Accede al artículo en el que se hizo clic
+      const mentorArticle = event.target.closest(".mentor");
+      // Redirige a la página del mentor
+      redirectToMentorPage(mentorArticle);
+    }
+  });
+};
+
+addCheckboxEventListener();
+addClickEventToMentors();
