@@ -3,21 +3,25 @@
 const user = document.getElementById("user");
 const contrasena = document.getElementById("contrasena");
 
+// Variable para obtener los usuarios existentes
+let students = []
+let mentors = []
 let users = [];
 
 // Funcion para obtener los usuarios de una API
-
 const getUsers = () => {
      fetch('http://localhost:3000/students')
           .then((response) => response.json())
           .then((data) => {
-               users = data;
+               students = data;
+               users = students;
           })
           .catch((error) => alert(error));
      fetch('http://localhost:3000/mentors')
           .then((response) => response.json())
           .then((data) => {
-               users.push(data);
+               mentors = data;
+               mentors.forEach((mentor) => users.push(mentor));
           })
           .catch((error) => alert(error));
 }
