@@ -6,6 +6,8 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="../css/profile.css">
+     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+     <link rel="stylesheet" type="text/css" href="../css/footer.css">
      <title>Profile</title>
 </head>
 <script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
@@ -14,7 +16,8 @@
      <header>
           <div class="navbar container-row">
                <div class="logo">
-                    <a href="../../../ProMentoring-Landing-Page/src/index.html"><img src="../assets/logo.png" alt="logo-ProMentoring" id="logo"></a>
+                    <a href="../../../ProMentoring-Landing-Page/src/index.html"><img src="../assets/logo.png"
+                              alt="logo-ProMentoring" id="logo"></a>
                     <h1>ProMentoring</h1>
                </div>
                <div class="pages-indixes">
@@ -28,9 +31,7 @@
           <section id="show-information">
                <h1>Informacion General</h1>
                <div class="container-row">
-                    <div class="container-col picture">
-                         <img src="../assets/profile.jfif" alt="profile-picture">
-                    </div>
+                    <div class="container-col picture" id="photo"> </div>
                     <div class="container-col info" id="infoDiv"> </div>
                </div>
           </section>
@@ -60,38 +61,21 @@
                     </div>
 
                     <div class="form-group">
-                         <label for="skills">Habilidades:</label>
-                         <div class="radio-group" id="skill-list">
-                              <input type="checkbox" id="programming" name="skills" value="Programación">
-                              <label for="programming">Programación</label><br>
-                              <input type="checkbox" id="data_structures" name="skills"
-                                   value="Estructuras De Datos Y Algoritmos">
-                              <label for="data_structures">Estructuras de datos y algoritmos</label><br>
-                              <input type="checkbox" id="web_development" name="skills" value="Desarrollo Web">
-                              <label for="web_development">Desarrollo web</label><br>
-                              <input type="checkbox" id="database" name="skills" value="Bases De Datos">
-                              <label for="database">Bases de datos</label><br>
-                              <input type="checkbox" id="operating_systems" name="skills" value="Sistemas Operativos">
-                              <label for="operating_systems">Sistemas operativos</label><br>
-                              <input type="checkbox" id="network_security" name="skills" value="Redes Y Deguridad">
-                              <label for="network_security">Redes y seguridad</label><br>
-                              <input type="checkbox" id="ai_ml" name="skills"
-                                   value="Inteligencia Artificial Y Aprendizaje Automático">
-                              <label for="ai_ml">Inteligencia artificial y aprendizaje automático</label><br>
-                              <input type="checkbox" id="problem_solving" name="skills" value="Resolución De Problemas">
-                              <label for="problem_solving">Resolución de problemas</label><br>
-                              <input type="checkbox" id="teamwork" name="skills" value="Trabajo En Equipo">
-                              <label for="teamwork">Trabajo en equipo</label><br>
-                              <input type="checkbox" id="continuous_learning" name="skills"
-                                   value="Aprendizaje Continuo">
-                              <label for="continuous_learning">Aprendizaje continuo</label><br>
-                         </div>
+                         <label for="link">Enlace:</label>
+                         <input type="url" id="link" name="link" placeholder="Ingrese un enlace" required>
                     </div>
+
+                    <div class="form-group">
+                         <label for="skills">Habilidades:</label>
+                         <div class="radio-group" id="skill-list"> </div>
+                    </div>
+
                     <div class="form-group insert">
                          <label for="insert-skills">Ingrese otra habilidad</label>
                          <input type="text" id="insert-skills" name="insert-skills" placeholder="Ingrese un habilidad">
                          <button class="disabled" type="button" disabled>Insertar habilidad</button>
                     </div>
+
                     <div class="form-submit">
                          <button type="submit" form="info-user" id="submit-info">Guardar</button>
                     </div>

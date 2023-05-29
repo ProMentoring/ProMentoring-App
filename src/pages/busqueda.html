@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse</title>
+    <title>Busqueda</title>
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/busqueda.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
+
 </head>
 <script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
 
@@ -26,7 +29,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <section id="buscador" class="buscador-section">
         <h2 class="titulo">Búsqueda de mentores expertos en programación</h2>
         <div class="container-row busqueda">
             <div class="container-col ">
@@ -34,7 +37,7 @@
                     <label>Habilidades:</label>
                     <span class="arrow-icon">▼</span>
                 </div>
-                <div class="checkbox-group">
+                <div class="checkbox-group habilidades">
                     <div class="elemento">
                         <input type="checkbox" id="c++" value="c++">
                         <label for="c++">C++</label>
@@ -52,12 +55,12 @@
                         <label for="sql">SQL</label>
                     </div>
                     <div class="elemento">
-                        <input type="checkbox" id="perl" value="perl">
-                        <label for="perl">Perl</label>
+                        <input type="checkbox" id="dart" value="dart">
+                        <label for="dart">Dart</label>
                     </div>
                     <div class="elemento">
-                        <input type="checkbox" id="csharp" value="csharp">
-                        <label for="csharp">C#</label>
+                        <input type="checkbox" id="flutter" value="flutter">
+                        <label for="flutter">Flutter</label>
                     </div>
                 </div>
             </div>
@@ -85,16 +88,79 @@
                     <label>Modalidad:</label>
                     <span class="arrow-icon">▼</span>
                 </div>
-                <div class="checkbox-group">
+                <div class="checkbox-group modalidad">
                     <div class="elemento">
-                        <input type="checkbox" name="grupal" id="grupal">
+                        <input type="checkbox" id="grupal" value="grupal">
                         <label for="grupal">Grupal</label>
                     </div>
                     <div class="elemento">
-                        <input type="checkbox" name="individual" id="individual">
+                        <input type="checkbox" id="individual" value="individual">
                         <label for="individual">Individual</label>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mentors">
+        <div class="container-col">
+            <div id="mentorsList" class="mentors-list">
+                <!-- <article class="mentor">
+                    <div class="container-row mentor-content">
+                        <img src="../assets/mentores/mentor1.jpg" alt="">
+                        <div class="container-col mentor-items">
+                            <h3>Juan Ortiz</h3>
+                            <p>Full stack Web Developer</p>
+                            <div class="container-row icons">
+                                <i class="fa-brands fa-python fa-beat fa-lg"></i>
+                                <i class="fa-solid fa-database fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-php fa-beat fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="mentor">
+                    <div class="container-row mentor-content">
+                        <img src="../assets/mentores/mentor2.png" alt="" class="mentor-imagen">
+                        <div class="container-col mentor-items">
+                            <h3>Carlos Ramirez</h3>
+                            <p>Senior iOS Developer</p>
+                            <div class="container-row icons">
+                                <i class="fa-brands fa-android fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-swift fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-apple fa-beat fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="mentor">
+                    <div class="container-row mentor-content">
+                        <img src="../assets/mentores/mentor3.jpg" alt="" class="mentor-imagen">
+                        <div class="container-col mentor-items">
+                            <h3>Maria Lopez</h3>
+                            <p>Senior Sofware Engineer</p>
+                            <div class="container-row icons">
+                                <i class="fa-brands fa-square-js fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-react fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-angular fa-beat fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="mentor">
+                    <div class="container-row mentor-content">
+                        <img src="../assets/mentores/mentor4.jpg" alt="" class="mentor-imagen">
+                        <div class="container-col mentor-items">
+                            <h3>Daniel Torres</h3>
+                            <p>Full-Stack Developer</p>
+                            <div class="container-row icons">
+                                <i class="fa-brands fa-square-js fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-node-js fa-beat fa-lg"></i>
+                                <i class="fa-brands fa-html5 fa-beat fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article> -->
             </div>
         </div>
     </section>
@@ -104,6 +170,7 @@
             <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
         </div>
     </footer>
+    <script src="../js/busqueda.js"></script>
 </body>
 
 </html>

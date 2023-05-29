@@ -137,7 +137,7 @@ header>img{
 }
 
 @media (max-width:480px){
-    #method-payment{
+    #method-payment{ 
         flex-wrap: wrap;
         gap: 5px;
     }

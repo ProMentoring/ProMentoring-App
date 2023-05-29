@@ -9,14 +9,24 @@ const passwordConfirmInput = document.getElementById('passwordConfirm');
 const rolSelect = document.getElementById('rol');
 
 // Variable para obtener los usuarios existentes
-let users = []
+let students = []
+let mentors = []
+let users = [];
 
 // Funcion para obtener los usuarios de una API
 const getUsers = () => {
-     fetch('http://localhost:3000/users')
+     fetch('http://localhost:3000/students')
           .then((response) => response.json())
           .then((data) => {
-               users = data;
+               students = data;
+               users = students;
+          })
+          .catch((error) => alert(error));
+     fetch('http://localhost:3000/mentors')
+          .then((response) => response.json())
+          .then((data) => {
+               mentors = data;
+               mentors.forEach((mentor) => users.push(mentor));
           })
           .catch((error) => alert(error));
 }
@@ -78,14 +88,14 @@ form.addEventListener('submit', (event) => {
           return;
      } else {
 
-
           // Se da formato a la data
 
           names = capitalizeInitials(names);
           lastname = capitalizeInitials(lastname);
 
           // Crear un objeto con los datos del nuevo usuario
-          const newUser = {
+
+          let newUser = {
                user: user,
                names: names,
                lastname: lastname,
@@ -93,12 +103,29 @@ form.addEventListener('submit', (event) => {
                email: email,
                rol: rol,
                career: '',
-               bio: '',
+               description: '',
                skills: [],
           };
+          if (rol === 'mentors') {
+               newUser = {
+                    user: user,
+                    names: names,
+                    lastname: lastname,
+                    password: password,
+                    email: email,
+                    speciality: '',
+                    photo: '',
+                    icons: [],
+                    skills: [],
+                    description: '',
+                    Reseñas: [],
+                    price: '',
+                    modalities: ''
+               };
+          }
 
           // Llamada a la API mediante fetch y enviar el objeto
-          fetch('http://localhost:3000/users', {
+          fetch(`http://localhost:3000/${rol}`, {
                method: 'POST',
                headers: {
                     'Content-Type': 'application/json'
@@ -108,13 +135,13 @@ form.addEventListener('submit', (event) => {
                .then(response => response.json())
                .then(data => {
                     console.log('Usuario agregado:', data);
-                    window.location.href = 'login.html';
+                    window.location.href = 'profile.html' + "?user=" + encodeURIComponent(user) + "&rol=" + encodeURIComponent(rol);
                })
                .catch(error => {
                     console.error('Error al agregar el usuario:', error);
                });
-          }
-     });
+     }
+});
 
 
 // Agregar eventos de escucha 

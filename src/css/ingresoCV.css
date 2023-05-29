@@ -1,97 +1,12 @@
-/* Estilos generales para la pagina */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    padding: 10px;
-    margin: 0;
-    background-color: rgb(43, 43, 40);
-}
-
-section {
-    min-height: 82%;
-    align-items: center;
-}
-
-.container-row {
-    display: flex;
-    flex-direction: row;
-    margin: 1%;
-}
-
-.container-col {
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-}
-
-button,
-input,
-a {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* Estilos para el navBar */
-.navbar {
-    align-items: center;
-    justify-content: space-between;
-}
 
-.logo {
-    width: 10%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-
-.logo a:hover {
-    color: #104C72;
-}
-
-.logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-
-.pages-indixes {
-    width: 40%;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-}
-
-.pages-indixes a {
-    text-decoration: none;
-    color: white;
-}
-
-.pages-indixes a:hover {
-    color: #104C72;
-}
-
-.pages-indixes a[href="#show-information"] {
+.pages-indixes a[href="profile.html"] {
     font-weight: bold;
-    color: #273CCB;
+    color: #27acff;
 }
 
-.pages-indixes a[href="#show-information"]:hover {
-    color: #192381;
+.pages-indixes a[href="profile.html"]:hover {
+    color: #70bae9;
 }
 
 
@@ -187,32 +102,8 @@ a {
     padding: 40px;
 }
 
-/* Estilos para el formulario */
-
-#edit-information .container-col {
-    background-color: #f9f9f9;
-    padding: 20px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    border-radius: 25px;
-    min-width: 50%;
-}
-
-#edit-information h1 {
-    color: #333;
-    font-style: italic;
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-left: 25px;
-}
-
-#info-user {
-    margin: 0 auto;
-}
-
-form {
+/* Estilos para el form-group (forms) */
+.form-group{
     margin: 0 auto;
     max-width: 100%;
     margin: 2% 1.5% 2% 1.5%;
@@ -222,12 +113,6 @@ form {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.form-group {
-    margin-bottom: 20px;
-    max-width: 95%;
-}
-
 .form-submit {
     margin-bottom: 20px;
 }
@@ -237,8 +122,7 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
-textarea {
+input[type="text"] {
     width: 100%;
     padding: 8px;
     font-size: 16px;
@@ -246,17 +130,7 @@ textarea {
     border-radius: 4px;
 }
 
-input[type="text"],
-#bio{
-    width: 98%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="text"]:hover,
-#bio:hover {
+input[type="text"]:hover{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -268,28 +142,6 @@ button[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.radio-group label {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.radio-group input[type="checkbox"] {
-    display: none;
-}
-
-.radio-group input[type="checkbox"]+label {
-    background-color: #fff;
-}
-
-.radio-group input[type="checkbox"]:checked+label {
-    background-color: #4CAF50;
-    color: #fff;
 }
 
 .form-submit {
@@ -312,29 +164,6 @@ button[type="submit"] {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.disabled {
-    background-color: gray;
-}
-
-.show {
-    cursor: pointer;
-    background-color: #273CCB;
-}
-
-.insert button:hover {
-    background-color: #192381;
-}
-
-/* Estilos para la caja de texto */
-.insert input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
 
 /* Estilos para el submit cambios */
 
@@ -353,37 +182,25 @@ button[type="submit"]:hover {
 }
 
 
-/* Estilos para el footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-footer span {
-    font-size: 14px;
-}
-
 /* Estilos adicionales para hacer la página responsiva */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     /* Estilos para dispositivos con un ancho máximo de 768px */
 
     .logo {
-         width: 100%;
+         width: 100% !important;
          justify-content: center;
          padding-bottom: 2.5%;
     }
 
     .pages-indixes {
-         width: 60%;
+         width: 100% !important;
          font-size: 14px;
+         justify-content: space-around;
     }
 
     .container-row {
-         flex-direction: column;
+         flex-direction: column !important;
          align-items: center;
          margin: 0;
     }

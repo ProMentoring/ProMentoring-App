@@ -1,101 +1,12 @@
 /* Estilos generales para la pagina */
 
-body {
-     margin: 0;
-     padding: 0;
-     font-family: Arial, sans-serif;
-     min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-}
-
-header {
-     padding: 10px;
-     margin: 0;
-     background-color: rgb(43, 43, 40);
-}
-
-section {
-     min-height: 100%;
-     align-items: center;
-     padding: 0px;
-     margin: 0px;
-}
-
-.container-row {
-     display: flex;
-     flex-direction: row;
-     margin: 1%;
-}
-
-.container-col {
-     display: flex;
-     flex-direction: column;
-     margin: 1%;
-}
-
-button,
-input,
-a {
-     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Estilos para el navBar */
-.navbar {
-     align-items: center;
-     justify-content: space-between;
-}
-
-.logo {
-     width: 10%;
-     color: white;
-     display: flex;
-     justify-content: space-between;
-}
-
-.logo a {
-     display: flex;
-     align-items: center;
-     text-decoration: none;
-     color: white;
-}
-
-.logo a:hover {
-     color: #104C72;
-}
-
-.logo img {
-     width: 30px;
-     height: 30px;
-     margin-right: 10px;
-}
-
-
-.pages-indixes {
-     width: 40%;
-     color: white;
-     display: flex;
-     justify-content: space-around;
-}
-
-.pages-indixes a {
-     text-decoration: none;
-     color: white;
-     padding: 1.5%;
-
-}
-
-.pages-indixes a:hover {
-     color: #104C72;
-}
-
 .pages-indixes a[href="#form-register"] {
      font-weight: bold;
-     color: #273CCB;
+     color: #27acff;
 }
 
 .pages-indixes a[href="#form-register"]:hover {
-     color: #192381;
+     color: #70bae9;
 }
 
 /* Estilos de los botones de Iniciar Sesion con Facebook */
@@ -251,47 +162,23 @@ select:hover {
      margin: 2% 2% 5% 2%;
 }
 
+/* Media Query para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
 
-
-/* Estilos para el footer */
-footer {
-     background-color: #333;
-     color: #fff;
-     padding: 20px;
-     text-align: center;
-     margin-top: auto;
-}
-
-footer span {
-     font-size: 14px;
-}
-
-
-
-/* Media Query para pantallas de hasta 600px de ancho */
-@media (max-width: 600px) {
-     .navbar .container-row {
+     header .container-row {
           flex-direction: column;
      }
-
-     .navbar {
-          align-items: flex-start;
+     .navbar{
+          width: 100% !important;
      }
-
      .logo {
-          width: 100%;
-          justify-content: space-evenly;
+          min-width: 100%;
           margin-bottom: 10px;
-     }
-
-     .logo a {
-          min-width: 10%;
+          justify-content: center !important;
      }
 
      .pages-indixes {
-          width: 100%;
-          flex-wrap: wrap;
-          justify-content: space-between;
+          width: 100% !important;
           margin-bottom: 10px;
      }
 
@@ -302,27 +189,5 @@ footer span {
      #form-register .container-row {
           align-items: flex-start;
           min-width: 100%;
-     }
-
-}
-
-/* Media Query para pantallas de hasta 768px de ancho */
-@media (max-width: 850px) {
-     header .container-row {
-          flex-direction: column;
-     }
-
-     .logo {
-          width: 100%;
-          margin-bottom: 10px;
-     }
-
-     .pages-indixes {
-          width: 100%;
-          margin-bottom: 10px;
-     }
-
-     #form-register {
-          max-width: 100%;
      }
 }

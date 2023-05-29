@@ -12,7 +12,7 @@ body {
 header {
     padding: 10px;
     margin: 0;
-    background-color: rgb(43, 43, 40);
+    background-color: #124e73;
 }
 
 section {
@@ -78,8 +78,9 @@ a {
 .pages-indixes a {
     text-decoration: none;
     color: white;
+    font-size: 18px;
 }
 
 .pages-indixes a:hover {
-    color: #104C72;
+    color: #70bae9;
 }

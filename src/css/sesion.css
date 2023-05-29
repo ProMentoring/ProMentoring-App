@@ -1,75 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-header {
-    padding: 10px;
-    margin: 0;
-    background-color: rgb(43, 43, 40);
-}
-section {
-    min-height: 100%;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-}
-
-/* Estilos para el navBar */
-.navbar {
-    align-items: center;
-    justify-content: space-between;
-}
-.logo {
-    width: 10%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-
-.logo a:hover {
-    color: #104C72;
-}
-
-.logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-.pages-indixes {
-    width: 40%;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-}
-
-.pages-indixes a {
-    text-decoration: none;
-    color: white;
-    padding: 1.5%;
-}
-
 .pages-indixes a:hover {
     color: #104C72;
 }
 
-.pages-indixes a[href="#form-register"] {
+.pages-indixes a[href="sesion.html"] {
     font-weight: bold;
-    color: #273CCB;
+    color: #27acff;
 }
 
-.pages-indixes a[href="#form-register"]:hover {
-    color: #192381;
+.pages-indixes a[href="sesion.html"]:hover {
+    color: #70bae9;
 }
 
 .container-row {
@@ -84,18 +23,6 @@ section {
     display: flex;
     flex-direction: column;
     margin: 0%;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-footer span {
-    font-size: 14px;
 }
 
 /* Estilos titulo */

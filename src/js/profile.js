@@ -1,5 +1,5 @@
 // Variables globales de los objetos 
-
+const photoDiv = document.getElementById('photo');
 const skillsBox = document.getElementById("skill-list");
 const boxes = skillsBox.querySelectorAll('input[type="checkbox"]');
 const insertSkillInput = document.getElementById("insert-skills");
@@ -12,15 +12,17 @@ const namesInput = document.getElementById('names');
 const lastnameInput = document.getElementById('lastname');
 const careerInput = document.getElementById('career');
 const bioInput = document.getElementById('bio');
+const linkInput = document.getElementById('link');
 
 // Variable para obtener el usuario
 let usersData = []
 let userData = []
+let students = []
+let mentors = []
 
 // ------------- Funciones 
 
 // Funcion para los nombres formato
-
 function capitalizeInitials(str) {
      return str.toLowerCase().replace(/(?:^|\s)\S/g, function (char) {
           return char.toUpperCase();
@@ -29,36 +31,44 @@ function capitalizeInitials(str) {
 
 // Funcion para obtener los usuarios de una API
 const getUsers = () => {
-     fetch('http://localhost:3000/users')
+     fetch('http://localhost:3000/students')
           .then((response) => response.json())
           .then((data) => {
-               usersData = data;
-               userData = usersData.find((data) => data.user === user);
-               console.log("Usuario: ", userData);
-               loadDataUser();
-               loadFormsData();
+               students = data;
+               usersData = students;
           })
           .catch((error) => alert(error));
-};
+     fetch('http://localhost:3000/mentors')
+          .then((response) => response.json())
+          .then((data) => {
+               mentors = data;
+               mentors.forEach((mentor) => usersData.push(mentor));
+               userData = usersData.find((data) => data.user === user);
+               console.log("Usuario: ", userData);
+               if (type === 'students') loadDataStudent();
+               else loadDataMentor();
+               loadPhoto();
+          })
+          .catch((error) => alert(error));
+}
 
-const loadDataUser = () => {
-
+// Funcion para cargar los datos de los estudiantes
+const loadDataStudent = () => {
      // Creacion de los componentes
-
      const names = document.createElement('h2');
      names.innerText = userData.names + " " + userData.lastname;
 
      const rol = document.createElement('p');
-     rol.innerText = userData.rol;
+     rol.innerText = capitalizeInitials(type);
 
      const career = document.createElement('h3');
      career.innerText = userData.career;
 
-     const bio = document.createElement('p');
-     bio.innerText = userData.bio
+     const description = document.createElement('p');
+     description.innerText = userData.description;
 
      const skillTitle = document.createElement('h3');
-     skillTitle.innerText = 'Habilidades'
+     skillTitle.innerText = 'Habilidades';
 
      const skillsList = document.createElement('ul');
 
@@ -76,33 +86,149 @@ const loadDataUser = () => {
           });
      }
 
+     // Se agregan al element infoDiv 
      infoDiv.appendChild(names);
      infoDiv.appendChild(rol);
      infoDiv.appendChild(career);
-     infoDiv.appendChild(bio);
+     infoDiv.appendChild(description);
      infoDiv.appendChild(skillTitle)
      infoDiv.appendChild(skillsList);
 
+     // Carga los datos en el forms
+     loadFormsDataStudent();
 };
 
-const loadFormsData = () => {
+// Funcion para cargar los datos de los mentores
+const loadDataMentor = () => {
+     // Creacion de los componentes
+     const names = document.createElement('h2');
+     names.innerText = userData.names + " " + userData.lastname;
+
+     const rol = document.createElement('p');
+     rol.innerText = capitalizeInitials(type);
+
+     const speciality = document.createElement('h3');
+     speciality.innerText = userData.speciality;
+
+     const description = document.createElement('p');
+     description.innerText = userData.description;
+
+     const skillTitle = document.createElement('h3');
+     skillTitle.innerText = 'Habilidades';
+
+     const skillsList = document.createElement('ul');
+
+     // Verificar si el array de habilidades está vacío
+     if (userData.skills.length === 0) {
+          const noSkills = document.createElement('li');
+          noSkills.innerText = 'No se han agregado habilidades.';
+          skillsList.appendChild(noSkills);
+     } else {
+          // Recorrer el array de habilidades y crear elementos <li> para cada una
+          userData.skills.forEach((skill) => {
+               const skills = document.createElement('li');
+               skills.innerText = skill;
+               skillsList.appendChild(skills);
+          });
+     }
+
+     // Se agregan al element infoDiv 
+     infoDiv.appendChild(names);
+     infoDiv.appendChild(rol);
+     infoDiv.appendChild(speciality);
+     infoDiv.appendChild(description);
+     infoDiv.appendChild(skillTitle)
+     infoDiv.appendChild(skillsList);
+
+     // Se cargan los datos al forms
+     loadFormsDataMentor();
+};
+
+//Funcion para cargar
+const loadPhoto = () => {
+     const photoUser = document.createElement('img');
+     photoUser.src = userData.photo;
+     photoUser.alt = "No hay imagen";
+     photoDiv.appendChild(photoUser);
+}
+
+// Funcion para cargar la data del estudiante al forms
+const loadFormsDataStudent = () => {
+
+     // Se rellenan los campos del forms
      namesInput.value = userData.names;
      lastnameInput.value = userData.lastname;
      careerInput.value = userData.career;
-     bioInput.value = userData.bio;
+     bioInput.value = userData.description;
+     linkInput.value = userData.photo;
 
+     // Se generan las habilidades en el forms
      userData.skills.forEach((skill) => {
-          boxes.forEach((checkbox) => {
 
-               if (checkbox.value === skill) {
-                    checkbox.checked = true;
-               }
-          });
+          // Crear el elemento de checkbox
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.id = skill.toLowerCase().replace(/\s/g, '_');
+          checkbox.name = 'skills';
+          checkbox.value = capitalizeInitials(skill.toLowerCase().replace(/\s/g, ' '));
+
+          // Crear la etiqueta del checkbox
+          const label = document.createElement('label');
+          label.htmlFor = skill.toLowerCase().replace(/\s/g, '_');
+          label.textContent = capitalizeInitials(skill);
+
+          // Crear un salto de línea
+          const br = document.createElement('br');
+
+          // Agregar el checkbox y la etiqueta al contenedor
+          skillsBox.appendChild(checkbox);
+          skillsBox.appendChild(label);
+          skillsBox.appendChild(br);
+
+          // Valida que este marcado
+          checkbox.checked = true;
      });
-
 }
 
+// Funcion para cargar la data del mentor al forms
+const loadFormsDataMentor = () => {
 
+     // Se rellenan los campos del forms
+     namesInput.value = userData.names;
+     lastnameInput.value = userData.lastname;
+     careerInput.value = userData.speciality;
+     bioInput.value = userData.description;
+     linkInput.value = userData.photo;
+
+     // Se generan las habilidades en el forms
+     userData.skills.forEach((skill) => {
+
+          // Crear el elemento de checkbox
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.id = skill.toLowerCase().replace(/\s/g, '_');
+          checkbox.name = 'skills';
+          checkbox.value = capitalizeInitials(skill.toLowerCase().replace(/\s/g, ' '));
+
+          // Crear la etiqueta del checkbox
+          const label = document.createElement('label');
+          label.htmlFor = skill.toLowerCase().replace(/\s/g, '_');
+          label.textContent = capitalizeInitials(skill);
+
+          // Crear un salto de línea
+          const br = document.createElement('br');
+
+          // Agregar el checkbox y la etiqueta al contenedor
+          skillsBox.appendChild(checkbox);
+          skillsBox.appendChild(label);
+          skillsBox.appendChild(br);
+
+          // Valida que este marcado
+          checkbox.checked = true;
+     });
+}
+
+// Funcion para enviar data al servidor JSON
 const sendChangesData = () => {
      // Obtener el ID del usuario que deseas editar
      const userId = userData.id;
@@ -113,32 +239,61 @@ const sendChangesData = () => {
      const lastname = lastnameInput.value;
      const password = userData.password;
      const email = userData.email;
-     const rol = userData.rol;
      const career = careerInput.value;
-     const bio = bioInput.value;
+     const description = bioInput.value;
+     const linkPhoto = linkInput.value;
      const checkboxes = skillsBox.querySelectorAll('input[type="checkbox"]:checked');
      const selectedSkills = [];
+
+     if (names === '' || lastname === '' || career === ''
+          || description === '' || linkPhoto === '')
+          return
 
      checkboxes.forEach((checkbox) => {
           selectedSkills.push(checkbox.value);
      });
-     console.log(names)
+
      // Crear un objeto con los datos actualizados del usuario
-     const updatedUser = {
+     let updatedUser = {
+          id: userId,
           user: user,
           names: names,
           lastname: lastname,
           password: password,
           email: email,
-          rol: rol,
           career: career,
-          bio: bio,
+          description: description,
+          photo: linkPhoto,
           skills: selectedSkills,
-          id: userId,
      };
 
+     if (type == 'mentors') {
+
+          const icons = userData.icons;
+          const reseñas = userData.Reseñas;
+          const price = userData.price;
+          const modalities = userData.modalities;
+
+          updatedUser = {
+               id: userId,
+               user: user,
+               names: names,
+               lastname: lastname,
+               password: password,
+               email: email,
+               speciality: career,
+               photo: linkPhoto,
+               icons: icons,
+               skills: selectedSkills,
+               description: description,
+               Reseñas: reseñas,
+               price: price,
+               modalities: modalities,
+          };
+     }
+
      // Realizar una solicitud HTTP para actualizar el usuario en el JSON del servidor
-     fetch(`http://localhost:3000/users/${userId}`, {
+     fetch(`http://localhost:3000/${type}/${userId}`, {
           method: 'PUT', // O PATCH dependiendo de tu implementación
           headers: {
                'Content-Type': 'application/json'
@@ -148,17 +303,16 @@ const sendChangesData = () => {
           .then(response => response.json())
           .then(data => {
                console.log('Usuario actualizado:', data);
-               let url = "profile.html" + "?user=" + encodeURIComponent(user);
+               let url = "profile.html" + "?user=" + encodeURIComponent(user)
+                    + "&rol=" + encodeURIComponent(type);
                window.location.href = url;
           })
           .catch(error => {
-               console.error('Error al actualizar el usuario:', error);
+               alert('Error al actualizar el usuario:', error);
           });
 }
 
-// Funciones para añadir events listeners
-
-// Obtener referencia al elemento de entrada y al botón
+// ------------------> Funciones para añadir events listeners
 
 
 // Agregar evento de escucha para verificar el valor del campo de entrada
@@ -172,6 +326,7 @@ insertSkillInput.addEventListener('input', function () {
           insertButton.classList.add('show');
      }
 });
+
 // Agregar evento de escucha para crear la habilidad
 insertButton.addEventListener('click', (e) => {
 
@@ -210,13 +365,16 @@ insertButton.addEventListener('click', (e) => {
      insertButton.classList.remove('show');
 });
 
+// Se agrega los eventos a los botones
 submitButton.addEventListener('click', sendChangesData);
 
 // ------------ Ejecucion
 // Leer los valores de usuario de la URL
 let urlParams = new URLSearchParams(window.location.search);
 let user = urlParams.get("user");
+let type = urlParams.get("rol");
 console.log("Usuario: " + user);
+console.log("Type: " + type);
 
 // Agregar eventos de escucha
 
