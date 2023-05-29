@@ -19,33 +19,22 @@ const getCards=()=>{
 }
 
 send.addEventListener("click",()=>{
-    cards.forEach((card)=>{
-        if(cardNumber.value == card.number && cardName.value == card.name && parseInt(month.value) == card.month && parseInt(year.value) == card.year && parseInt(cvv.value) == card.cvv){
-            if(parseInt(card.cash)>240){
-                msg.textContent="Se realizó el pago exitosamente";
-                msg.style.color="green";
-            } else{
-                msg.textContent="No cuenta con dinero en su cuenta";
-                msg.style.color="red";
-            }
-        } else{
-            msg.textContent="No se completó el pago, por favor verifique su información";
+    const findCard = cards.find((c)=>c.number==cardNumber.value &&
+        c.name == cardName.value && parseInt(month.value)==c.month
+        && parseInt(year.value)==c.year && parseInt(cvv.value) == c.cvv);
+    console.log(findCard);
+    if(findCard){
+        if(findCard.cash > 240){
+            msg.textContent="Se realizó el pago exitosamente";
+            msg.style.color="green";
+        }else{
+            msg.textContent="No cuenta con dinero en su cuenta";
             msg.style.color="red";
         }
-    })
+    }else{
+        msg.textContent="No se completó el pago, por favor verifique su información";
+        msg.style.color="red";
+    }
 })
 
 getCards();
-/*cardNumber.value == card.number && cardName.value == card.name && parseInt(month.value) == card.month && parseInt(year.value) == card.year && parseInt(cvv.value) == card.cvv*/
-/*cardNumber.value != card.number || cardName.value != card.name || parseInt(month.value) != card.month || parseInt(year.value) != card.year || parseInt(cvv.value) != card.cvv*/
-/*            if(parseInt(card.cash)>240){
-                msg.textContent="Se realizó el pago exitosamente";
-                msg.style.color="green";
-            } else{
-                msg.textContent="No cuenta con dinero en su cuenta";
-                msg.style.color="red";
-            } */
-/*
-msg.textContent="No se completó el pago, por favor verifique su información";
-msg.style.color="red";
-*/
