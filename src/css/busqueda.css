@@ -167,3 +167,24 @@
     justify-content: space-between;
     gap: 50%;
 }
+
+/* Media Query para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+
+    header .container-row {
+         flex-direction: column;
+    }
+    .navbar{
+         width: 100% !important;
+    }
+    .logo {
+         min-width: 100%;
+         margin-bottom: 10px;
+         justify-content: center !important;
+    }
+
+    .pages-indixes {
+         width: 100% !important;
+         margin-bottom: 10px;
+    }
+}
