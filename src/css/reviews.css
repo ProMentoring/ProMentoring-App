@@ -9,7 +9,7 @@ section{
 header{
     width: 100%;
     height: 100px;
-    background-color: #91c1f0;
+    background-color: #124E73;
 }
 nav{
     width: 100%;
@@ -55,11 +55,11 @@ nav h1,#navbar-right a{
 }
 
 #navbar-right{
-    width: 40%;
+    width: 440px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap:5px;
+    gap:8px;
 }
 
 #navbar-right a:hover{
@@ -75,7 +75,7 @@ nav h1,#navbar-right a{
 /* DISEÑO AL CUERPO*/
 /* Presentación del mentor  */
 #mentor-profile{
-    margin: 5px 0px;
+    margin: 30px 0px;
     display: flex;
     align-items: center;
 }
@@ -101,6 +101,9 @@ nav h1,#navbar-right a{
 }
 
 /* RESEÑAS DE LOS ESTUDIANTES */
+#container-reviews{
+    margin: 20px 0;
+}
 .reviews{
     border: 1px;
     border-color: gray;
@@ -116,8 +119,32 @@ nav h1,#navbar-right a{
     margin: 0px 5px 10px 5px;
 }
 
+#container-apply{
+    text-align: center;
+}
+
+#apply-now{
+    color: white;
+    background-color: #3E5DCC;
+    width: 150px;
+    height: 30px;
+    border-style: solid;
+    border: 2px;
+    border-radius: 5px;
+}
+
+#apply-now:hover{
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 15px;
+    scale: 1.2;
+}
+
 @media (max-width: 600px){
     #container-left-items > h1{
+        display: none;
+    }
+    #items-profile{
         display: none;
     }
 }
@@ -145,12 +172,139 @@ nav h1,#navbar-right a{
     }
     #presentación-mentor > p{
         width: 100%;
-        padding: 10px;
+        padding: 10px 0;
+        margin: 0px 10px;
     }
 }
 
 @media (min-width:800px) and (max-width: 1024px){
     section{
         margin: 0 50px;
+    }
+}
+
+/*FOOTER*/
+footer {
+    background-color: #124e73;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+#container-bottom-items{
+    padding: 5px;
+    margin: 5px 5px 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+#box-logo{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+#box-logo img{
+    width: 50px;
+}
+
+#container-options{
+    display: flex;
+    justify-content: space-around;
+    gap:20px
+} 
+
+.container-columns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-columns a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-columns a:hover{
+    color: #838383;
+    scale: 1.05;
+}
+
+#iconos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#iconos a img:hover{
+    scale: 1.2;
+}
+
+#footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#container-conditions{
+    display: flex;
+    gap: 20px;
+}
+
+#container-conditions a{
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#container-conditions a:hover{
+    color: #838383;
+    scale: 1.10;
+}
+
+@media (max-width:1023px){
+    /*media query de Comentarios de los estudiantes*/
+    #container-reviews{
+         grid-template-columns: repeat(2,1fr);
+    }
+    /*media query de los comentarios*/
+    #contact-us img{
+         display: none;
+    }
+    /*media query del footer*/
+    #footer-bottom{
+         flex-direction: column;
+         justify-content: center;
+         gap:20px;
+    }
+    #container-conditions{
+         justify-content: space-evenly;
+    }
+}
+
+@media (max-width:780px){
+    /*media query de Comentarios de los estudiantes*/
+    #container-reviews{
+         grid-template-columns: repeat(1,1fr);
+    }
+    /*media query del footer*/
+    #iconos{
+         width: 100%;
+         justify-content: center;
+    }
+    #container-options{
+         width: 100%;
+         margin: 10px;
+    }
+
+}
+@media (max-width:480px){
+    /*media query del footer*/
+    #container-options{
+         justify-content: space-between;
     }
 }
