@@ -38,12 +38,14 @@
 }
 
 #show-information .picture {
+     width: 40%;
      align-items: center;
      justify-content: center;
 }
 
 #show-information .picture img {
-     width: 45%;
+     max-width: 60%;
+     min-width: 45%;
      height: auto;
      border-radius: 50%;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -196,6 +198,7 @@ textarea {
 }
 
 input[type="text"],
+input[type="url"],
 #bio {
      width: 98%;
      padding: 8px;
@@ -205,6 +208,7 @@ input[type="text"],
 }
 
 input[type="text"]:hover,
+input[type="url"]:hover,
 #bio:hover {
      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -312,6 +316,13 @@ button[type="submit"]:hover {
           width: 100% !important;
      }
 
+     #photo{
+          align-content: center !important;
+          justify-content: center !important;
+          min-width: 85% !important;
+          max-width: 100%;
+     }
+
      .logo {
           min-width: 100%;
           margin-bottom: 10px;
@@ -350,5 +361,9 @@ button[type="submit"]:hover {
      #info-user .container-row {
           align-items: flex-start;
           min-width: 100%;
+     }
+
+     h2{
+          text-align: center;
      }
 }
