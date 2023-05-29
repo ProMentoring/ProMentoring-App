@@ -33,13 +33,16 @@ document.getElementById("form-login").addEventListener("submit", function (event
      // Validar si el usuario existe
      const username = user.value;
      const password = contrasena.value;
-
      const foundUser = users.find((u) => (u.user === username || u.email === username)
           && u.password === password);
+     let rol = 'students';
+     if (foundUser.career === undefined) {
+          rol = 'mentors';
+     }
 
      if (foundUser) {
           // Redirigir a otra página con los datos incluidos en la URL
-          let url = "profile.html" + "?user=" + encodeURIComponent(username);
+          let url = "profile.html" + "?user=" + encodeURIComponent(username) + "&rol="+encodeURIComponent(rol);
           window.location.href = url;
      } else {
           alert("Usuario y/o contraseña incorrectos");

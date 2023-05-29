@@ -106,7 +106,7 @@ form.addEventListener('submit', (event) => {
                description: '',
                skills: [],
           };
-          if (rol == 'mentors') {
+          if (rol === 'mentors') {
                newUser = {
                     user: user,
                     names: names,
@@ -135,7 +135,7 @@ form.addEventListener('submit', (event) => {
                .then(response => response.json())
                .then(data => {
                     console.log('Usuario agregado:', data);
-                    window.location.href = 'profile.html' + "?user=" + encodeURIComponent(user);
+                    window.location.href = 'profile.html' + "?user=" + encodeURIComponent(user) + "&rol=" + encodeURIComponent(rol);
                })
                .catch(error => {
                     console.error('Error al agregar el usuario:', error);
