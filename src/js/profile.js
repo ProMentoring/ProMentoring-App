@@ -7,6 +7,10 @@ const insertButton = document.querySelector('.form-group button');
 const infoDiv = document.getElementById('infoDiv');
 const submitButton = document.getElementById('submit-info');
 
+// Variables para el link a cada pagina
+const busquedaLink = document.getElementById('busqueda-link');
+const sesionLink = document.getElementById('sesion-link');
+
 // Variables globales para el forms
 const namesInput = document.getElementById('names');
 const lastnameInput = document.getElementById('lastname');
@@ -366,6 +370,8 @@ insertButton.addEventListener('click', (e) => {
 });
 
 // Se agrega los eventos a los botones
+
+// Funcion de enviar data de actualizar
 submitButton.addEventListener('click', sendChangesData);
 
 // ------------ Ejecucion
@@ -376,6 +382,13 @@ let type = urlParams.get("rol");
 console.log("Usuario: " + user);
 console.log("Type: " + type);
 
-// Agregar eventos de escucha
+// Funcion de enviar data a la pagina de busqueda
+busquedaLink.href = "busqueda.html" + "?user=" + encodeURIComponent(user)
+     + "&rol=" + encodeURIComponent(type);
 
+// Funcion de enviar data a la pagina sesion
+sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+     + "&rol=" + encodeURIComponent(type);
+
+// Agregar eventos de escucha
 getUsers();

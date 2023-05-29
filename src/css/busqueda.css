@@ -1,11 +1,11 @@
 /* Estilos para el navbar */
 
-.pages-indixes a[href="busqueda.html"] {
+.pages-indixes a[href="#mentorsList"] {
     font-weight: bold;
     color: #27acff;
 }
 
-.pages-indixes a[href="busqueda.html"]:hover {
+.pages-indixes a[href="#mentorsList"]:hover {
     color: #70bae9;
 }
 
