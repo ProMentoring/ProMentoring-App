@@ -1,83 +1,89 @@
+// Variables globales de los objetos 
 const mentorsList = document.getElementById("mentorsList");
 const checkboxGroup = document.querySelectorAll(".checkbox-group input[type='checkbox']");
 const precioMenorInput = document.querySelector("#precio-menor");
 const precioMayorInput = document.querySelector("#precio-mayor");
 
+// Variables para el link a cada pagina
+const sesionLink = document.getElementById('sesion-link');
+const profileLink = document.getElementById('profile-link');
+
+// Variables globales para el forms
 precioMenorInput.addEventListener("input", () => fetchMentors());
 precioMayorInput.addEventListener("input", () => fetchMentors());
 
 const selectedFilters = [];
 let mentors = [];
 
-const fetchMentors = ()=>{
-    fetch("http://localhost:3000/mentors")
+const fetchMentors = () => {
+  fetch("http://localhost:3000/mentors")
     .then((response => response.json()))
     .then(data => {
-        mentors = data;
-        filterMentorsAndShow();
+      mentors = data;
+      filterMentorsAndShow();
     })
     .catch((error) => console.error("Error", error));
 }
 
 const showMentors = (mentors) => {
-    // Vaciar el contenido actual de la lista de mentores
-    mentorsList.innerHTML = "";
+  // Vaciar el contenido actual de la lista de mentores
+  mentorsList.innerHTML = "";
 
-    mentors.forEach(mentor => {
-        // Crear el elemento <article> para el mentor
-        const mentorArticle = document.createElement("article");
-        mentorArticle.classList.add("mentor");
-        
-        // Crear el contenedor de fila para el contenido del mentor
-        const mentorContainerRow = document.createElement("div");
-        mentorContainerRow.classList.add("container-row");
-        mentorContainerRow.classList.add("mentor-content");
+  mentors.forEach(mentor => {
+    // Crear el elemento <article> para el mentor
+    const mentorArticle = document.createElement("article");
+    mentorArticle.classList.add("mentor");
 
-        // Crear la imagen del mentor
-        const mentorImagen = document.createElement("img");
-        mentorImagen.src = mentor.photo;
-        mentorImagen.alt = "No hay imagen";
+    // Crear el contenedor de fila para el contenido del mentor
+    const mentorContainerRow = document.createElement("div");
+    mentorContainerRow.classList.add("container-row");
+    mentorContainerRow.classList.add("mentor-content");
 
-        // Crear el contenedor de columna para los elementos del mentor
-        const mentorContainerColumn = document.createElement("div");
-        mentorContainerColumn.classList.add("container-col");
-        mentorContainerColumn.classList.add("mentor-items");
+    // Crear la imagen del mentor
+    const mentorImagen = document.createElement("img");
+    mentorImagen.src = mentor.photo;
+    mentorImagen.alt = "No hay imagen";
 
-        // Crear el nombre del mentor
-        const mentorName = document.createElement("h3");
-        mentorName.textContent = mentor.names;
+    // Crear el contenedor de columna para los elementos del mentor
+    const mentorContainerColumn = document.createElement("div");
+    mentorContainerColumn.classList.add("container-col");
+    mentorContainerColumn.classList.add("mentor-items");
 
-        // Crear la especialidad del mentor
-        const mentorSpeciality = document.createElement("p");
-        mentorSpeciality.textContent = mentor.speciality;
+    // Crear el nombre del mentor
+    const mentorName = document.createElement("h3");
+    mentorName.textContent = mentor.names;
 
-        // Crear el contenedor de fila para los iconos del mentor
-        const mentorContainerIcons = document.createElement("div");
-        mentorContainerIcons.classList.add("container-row");
-        mentorContainerIcons.classList.add("icons");
+    // Crear la especialidad del mentor
+    const mentorSpeciality = document.createElement("p");
+    mentorSpeciality.textContent = mentor.speciality;
 
-        // Agregar cada icono del mentor al contenedor de iconos
-        mentor.icons.forEach(icon => {
-            const mentorIcon = document.createElement("i");
-            mentorIcon.classList.add("fa-brands");
-            mentorIcon.classList.add(icon);
-            mentorIcon.classList.add("fa-beat");
-            mentorIcon.classList.add("fa-lg");
-            mentorContainerIcons.append(mentorIcon);
-        });       
-         
-        // Agregar los elementos al árbol DOM
-        mentorContainerColumn.appendChild(mentorName);
-        mentorContainerColumn.appendChild(mentorSpeciality);
-        mentorContainerColumn.appendChild(mentorContainerIcons);
+    // Crear el contenedor de fila para los iconos del mentor
+    const mentorContainerIcons = document.createElement("div");
+    mentorContainerIcons.classList.add("container-row");
+    mentorContainerIcons.classList.add("icons");
 
-        mentorContainerRow.appendChild(mentorImagen);
-        mentorContainerRow.appendChild(mentorContainerColumn);
-
-        mentorArticle.appendChild(mentorContainerRow);
-        
-        mentorsList.appendChild(mentorArticle);
+    // Agregar cada icono del mentor al contenedor de iconos
+    mentor.icons.forEach(icon => {
+      const mentorIcon = document.createElement("i");
+      mentorIcon.classList.add("fa-brands");
+      mentorIcon.classList.add(icon);
+      mentorIcon.classList.add("fa-beat");
+      mentorIcon.classList.add("fa-lg");
+      mentorContainerIcons.append(mentorIcon);
     });
+
+    // Agregar los elementos al árbol DOM
+    mentorContainerColumn.appendChild(mentorName);
+    mentorContainerColumn.appendChild(mentorSpeciality);
+    mentorContainerColumn.appendChild(mentorContainerIcons);
+
+    mentorContainerRow.appendChild(mentorImagen);
+    mentorContainerRow.appendChild(mentorContainerColumn);
+
+    mentorArticle.appendChild(mentorContainerRow);
+
+    mentorsList.appendChild(mentorArticle);
+  });
 }
 
 const filterMentorsAndShow = () => {
@@ -86,7 +92,7 @@ const filterMentorsAndShow = () => {
   //convertir a valores enteros los precios
   const minPrice = parseInt(precioMenorInput.value);
   const maxPrice = parseInt(precioMayorInput.value);
-  
+
   //Filtra los mentores
   const filteredMentors = mentors.filter(mentor => {
     // Comprueba si hay coincidencia en las habilidades
@@ -107,22 +113,22 @@ const filterMentorsAndShow = () => {
   showMentors(filteredMentors);
 }
 
-const addCheckboxEventListener = () =>{
-    checkboxGroup.forEach(checkbox => {
-        checkbox.addEventListener("change", () => {
-            // Si el checkbox está seleccionado, se agrega a la lista de filtros seleccionados
-            if (checkbox.checked) {
-                selectedFilters.push(checkbox.value);
-            } 
-            // Si el checkbox se deselecciona, se remueve de la lista de filtros seleccionados
-            else {
-                const index = selectedFilters.indexOf(checkbox.value);
-                selectedFilters.splice(index, 1);
-            }
-             // Llama a la función para obtener los mentores filtrados
-            fetchMentors();
-        });
+const addCheckboxEventListener = () => {
+  checkboxGroup.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+      // Si el checkbox está seleccionado, se agrega a la lista de filtros seleccionados
+      if (checkbox.checked) {
+        selectedFilters.push(checkbox.value);
+      }
+      // Si el checkbox se deselecciona, se remueve de la lista de filtros seleccionados
+      else {
+        const index = selectedFilters.indexOf(checkbox.value);
+        selectedFilters.splice(index, 1);
+      }
+      // Llama a la función para obtener los mentores filtrados
+      fetchMentors();
     });
+  });
 }
 
 const redirectToMentorPage = (mentorArticle) => {
@@ -144,5 +150,24 @@ const addClickEventToMentors = () => {
   });
 };
 
+//--- Ejecucion 
+
+// Leer los valores de usuario de la URL
+let urlParams = new URLSearchParams(window.location.search);
+let user = urlParams.get("user");
+let type = urlParams.get("rol");
+console.log("Usuario: " + user);
+console.log("Type: " + type);
+
+// Funcion de enviar data a la pagina de busqueda
+sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+  + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina sesion
+profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
+  + "&rol=" + encodeURIComponent(type);
+
+
+// Funciones para agregar eventos
 addCheckboxEventListener();
 addClickEventToMentors();
