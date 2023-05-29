@@ -2,12 +2,12 @@
     color: #104C72;
 }
 
-.pages-indixes a[href="sesion.html"] {
+.pages-indixes a[href="#sesiones-info"] {
     font-weight: bold;
     color: #27acff;
 }
 
-.pages-indixes a[href="sesion.html"]:hover {
+.pages-indixes a[href="#sesiones-info"]:hover {
     color: #70bae9;
 }
 
