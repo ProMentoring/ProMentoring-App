@@ -45,7 +45,7 @@ const showMentors = (mentors) => {
 
         // Crear el nombre del mentor
         const mentorName = document.createElement("h3");
-        mentorName.textContent = mentor.name;
+        mentorName.textContent = mentor.names;
 
         // Crear la especialidad del mentor
         const mentorSpeciality = document.createElement("p");
@@ -129,7 +129,7 @@ const redirectToMentorPage = (mentorArticle) => {
   // Se obtiene el nombre del mentor del elemento h3 dentro del artículo
   const mentorName = mentorArticle.querySelector("h3").textContent;
   // Redirige a la página del mentor pasando su nombre como parámetro en la URL
-  window.location.href = `mentor.html?name=${encodeURIComponent(mentorName)}`;
+  window.location.href = `reviews.html?name=${encodeURIComponent(mentorName)}`;
 };
 
 const addClickEventToMentors = () => {

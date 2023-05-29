@@ -43,12 +43,14 @@
 
 /* Estilos de la tarjeta sesion*/
 .sesiones{
+    display: inline-flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .sesion-card{
     padding: 0px;
     margin: 1% 0%;
-    width: 20%;
+    min-width: 20%;
 }
 .sesion-card .titulo{
     background-color: #84A9D0;
@@ -68,7 +70,7 @@
     padding: 5px 20px;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 }
-.descripcion .container-col li, a, p{
+.container-col a{
     font-size: 18px;
     padding: 10px 0px;
 }
