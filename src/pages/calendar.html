@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/calendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/reviews.css">
+    <title>Calendario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navbar-left">
+                <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
+                    <img src="../assets/logo.png" alt="PROMENTORING">
+
+                    <h1>Promentoring</h1>
+                </a>
+            </div>
+            <div id="navbar-right">
+                <a href="busqueda.html">Busqueda</a>
+                <a href="sesion.html">Mentorias</a>
+                <a href="">Calendarios</a>
+                <a href="">Mi perfil</a>
+                <div id="items-profile">
+                    <img id="user-profile" src="../assets/profile.jpg" alt="PROFILE">
+                    <i class="fa-solid fa-caret-down" style="color: #595959;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <div class="calendar">
+        <div class="calendar__info">
+            <div class="calendar_container_year">
+                <div class="calendar__prev" id="prev-month-year">&#9664;</div>
+                <div class="calendar__year" id="year"></div>
+                <div class="calendar__next" id="next-month-year">&#9654;</div>
+            </div>
+            <div class="calendar_container_month">
+                <div class="calendar__prev" id="prev-month">&#9664;</div>
+                <div class="calendar__month" id="month"></div>
+                <div class="calendar__next" id="next-month">&#9654;</div>
+            </div>
+            <!-- <div class="calendar__prev" id="prev-month">&#9664;</div>
+            <div class="calendar__month" id="month"></div>
+            <div class="calendar__year" id="year"></div>
+            <div class="calendar__next" id="next-month">&#9654;</div> -->
+        </div>
+    
+        <div class="calendar__week">
+            <div class="calendar__day calendar__item">Lunes</div>
+            <div class="calendar__day calendar__item">Martes</div>
+            <div class="calendar__day calendar__item">Miércoles</div>
+            <div class="calendar__day calendar__item">Jueves</div>
+            <div class="calendar__day calendar__item">Viernes</div>
+            <div class="calendar__day calendar__item">Sábado</div>
+            <div class="calendar__day calendar__item">Domingo</div>
+        </div>
+
+        <div class="calendar__dates" id="dates"></div>
+    </div>
+</body>
+<script src="../js/calendar.js"></script>
+</html>
