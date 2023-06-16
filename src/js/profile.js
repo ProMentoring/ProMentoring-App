@@ -11,6 +11,7 @@ const sectionInfo = document.getElementById("info-user");
 // Variables para el link a cada pagina
 const busquedaLink = document.getElementById('busqueda-link');
 const sesionLink = document.getElementById('sesion-link');
+const calendarLink = document.getElementById('calendar-link');
 
 // Variables globales para el forms
 const namesInput = document.getElementById('names');
@@ -415,6 +416,10 @@ busquedaLink.href = "busqueda.html" + "?user=" + encodeURIComponent(user)
 
 // Funcion de enviar data a la pagina sesion
 sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+     + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina sesion
+calendarLink.href = "calendar.html" + "?user=" + encodeURIComponent(user)
      + "&rol=" + encodeURIComponent(type);
 
 // Agregar eventos de escucha

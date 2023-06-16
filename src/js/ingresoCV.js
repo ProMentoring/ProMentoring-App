@@ -42,7 +42,7 @@ let type = urlParams.get("rol");
 console.log("Usuario: " + user);
 console.log("Type: " + type);
 
-// Funcion de enviar data a la pagina de busqueda
+// Funcion de enviar data a la pagina calendario
 busquedaLink.href = "busqueda.html" + "?user=" + encodeURIComponent(user)
      + "&rol=" + encodeURIComponent(type);
 
@@ -50,12 +50,13 @@ busquedaLink.href = "busqueda.html" + "?user=" + encodeURIComponent(user)
 sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
      + "&rol=" + encodeURIComponent(type);
 
-// Funcion de enviar data a la pagina calendar
-calendarLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+// Funcion de enviar data a la pagina calendario
+calendarLink.href = "calendar.html" + "?user=" + encodeURIComponent(user)
      + "&rol=" + encodeURIComponent(type);
 
-// Funcion de enviar data a la pagina perfil
-profileLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+     // Funcion de enviar data a la pagina de perfil
+profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
      + "&rol=" + encodeURIComponent(type);
+
 
 // Agregar eventos de escucha
