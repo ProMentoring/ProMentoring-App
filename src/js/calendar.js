@@ -1,3 +1,4 @@
+// Variables globales de los objetos 
 let monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo',
  'Junio', 'Julio', 'Agosto', 'Setiembre','Octubre', 'Noviembre', 'Diciembre'];
 
@@ -16,6 +17,12 @@ let nextMonthDOM = document.getElementById('next-month');
 let prevYeatDOM = document.getElementById('prev-month-year');
 let nextYearDOM = document.getElementById('next-month-year');
 
+// Variables para el link a cada pagina
+const busquedaLink = document.getElementById('busqueda-link');
+const sesionLink = document.getElementById('sesion-link');
+const profileLink = document.getElementById('profile-link');
+
+// Variables globales para el calendario
 month.textContent = monthNames[monthNumber];
 year.textContent = currentYear.toString();
 
@@ -104,4 +111,24 @@ const nextYear=()=>{
     setNewDate();
 }
 
+//--- Ejecucion 
+
+// Leer los valores de usuario de la URL
+let urlParams = new URLSearchParams(window.location.search);
+let user = urlParams.get("user");
+let type = urlParams.get("rol");
+console.log("Usuario: " + user);
+console.log("Type: " + type);
+
+// Funcion de enviar data a la pagina de busqueda
+busquedaLink.href = "busqueda.html" + "?user=" + encodeURIComponent(user)
++ "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina sesion
+sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+  + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina perfil
+profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
+  + "&rol=" + encodeURIComponent(type);
 writeMonth(monthNumber);
