@@ -243,6 +243,11 @@ button[type="submit"] {
 .radio-group input[type="checkbox"]:checked+label {
      background-color: #4CAF50;
      color: #fff;
+     transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.radio-group input[type="checkbox"]:checked+label:hover {
+     background-color: #3e8b40;
 }
 
 .form-submit {
@@ -275,7 +280,7 @@ button[type="submit"] {
 }
 
 .insert button:hover {
-     background-color: #192381;
+     background-color: #1977f3;
 }
 
 /* Estilos para la caja de texto */
@@ -286,6 +291,21 @@ button[type="submit"] {
      border: 1px solid #ccc;
      border-radius: 4px;
      box-sizing: border-box;
+}
+
+/* Estilos para el boton de Cv */
+
+#info-user button[id="submit-cv"] {
+     background-color: #71a1be;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     font-size: 16px;
+     border-radius: 4px;
+     cursor: pointer;
+}
+#info-user button[id="submit-cv"]:hover {
+     background-color: #1977f3;
 }
 
 
@@ -302,7 +322,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-     background-color: #192381;
+     background-color: #1977f3;
 }
 
 /* Media Query para pantallas de hasta 800px de ancho */
