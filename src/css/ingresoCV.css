@@ -1,6 +1,6 @@
 /* Estilos para el navBar */
 
-.pages-indixes a[href="profile.html"] {
+.pages-indixes a[id="profile-link"] {
     font-weight: bold;
     color: #27acff;
 }

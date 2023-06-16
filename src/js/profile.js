@@ -6,6 +6,7 @@ const insertSkillInput = document.getElementById("insert-skills");
 const insertButton = document.querySelector('.form-group button');
 const infoDiv = document.getElementById('infoDiv');
 const submitButton = document.getElementById('submit-info');
+const sectionInfo = document.getElementById("info-user");
 
 // Variables para el link a cada pagina
 const busquedaLink = document.getElementById('busqueda-link');
@@ -231,6 +232,32 @@ const loadFormsDataMentor = () => {
           // Valida que este marcado
           checkbox.checked = true;
      });
+
+     // Cargar CV
+
+     const divCv = document.createElement('div');
+     divCv.className = "form-group";
+
+     // Crear la etiqueta del checkbox
+     const label = document.createElement('label');
+     label.htmlFor = 'cvDocument';
+     label.textContent = "Ingrese su CV";
+
+     const buttonCV = document.createElement('button');
+     buttonCV.textContent = "Ingresar CV";
+     buttonCV.id = "submit-cv";
+     buttonCV.type = "button";
+     divCv.appendChild(buttonCV);
+     sectionInfo.appendChild(divCv);
+
+     buttonCV.addEventListener('click', sendCV);
+}
+
+//Funcion para redirigir a la pagina ingreso de CV
+const sendCV = () => {
+     let url = "ingresoCV.html" + "?user=" + encodeURIComponent(user)
+          + "&rol=" + encodeURIComponent(type);
+     window.location.href = url;
 }
 
 // Funcion para enviar data al servidor JSON
