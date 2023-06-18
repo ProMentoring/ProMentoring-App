@@ -8,6 +8,8 @@ const busquedaLinked = document.getElementById('busqueda-link');
 const sesionLinked = document.getElementById('sesion-link');
 const calendarLinked = document.getElementById('calendar-link');
 const profileLinked = document.getElementById('profile-link');
+const paymentLinked = document.getElementById('payments-link');
+
 
 let mentores = [];
 var auxiliar;
@@ -92,6 +94,10 @@ calendarLinked.href = "calendar.html" + "?user=" + encodeURIComponent(user)
 
 // Funcion de enviar data a la pagina de perfil
 profileLinked.href = "profile.html" + "?user=" + encodeURIComponent(user)
+    + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina de perfil
+paymentLinked.href = "payments.html" + "?user=" + encodeURIComponent(user)
     + "&rol=" + encodeURIComponent(type);
 
 getMentors();

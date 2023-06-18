@@ -143,19 +143,13 @@ window.addEventListener('resize', function () {
     console.log(isResize);
     if (screenWidth < 800 && isResize === false) {
         isResize = true;
-        console.log(isResize);
-        console.log("text 2");
         Array.from(calendarDays).forEach((day) => {
-            console.log(`{${day.innerHTML.toString()}}`);
             day.innerHTML = daysWeekTransform[day.innerHTML.toString()];
-            console.log(`{${day.innerHTML.toString()}}`);
         });
     }
     if (screenWidth > 1000 && isResize === true) {
-        console.log("2 text");
         Array.from(calendarDays).forEach((day) => {
             day.innerHTML = daysWeek[day.innerHTML.toString()];
-            console.log(`{${day.innerHTML.toString()}}`);
         });
         isResize = false;
     }
