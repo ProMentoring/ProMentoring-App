@@ -1,4 +1,25 @@
+section {
+    margin-right: 100px;
+    margin-left: 100px;
+}
 
+/* DISEÑO AL ENCABEZADO */
+
+#items-profile {
+    display: flex;
+    align-items: center;
+}
+
+#items-profile:hover {
+    cursor: pointer;
+}
+
+#user-profile {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
 
 .title {
     text-align: center;
@@ -6,10 +27,14 @@
 }
 
 .calendar {
-    width: 80%;
-    height: 80%;
-    margin: 20px auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     padding: .5em 0;
+}
+
+section {
+    padding-top: 3%;
 }
 
 .calendar_container_year {
@@ -85,6 +110,10 @@
 /* Media Query para pantallas de hasta 800px de ancho */
 @media (max-width: 800px) {
 
+    header .container-row {
+        flex-direction: column;
+    }
+
     nav .container-row {
         flex-direction: column;
         flex-wrap: wrap;
@@ -111,13 +140,7 @@
     }
 
     .calendar {
-        width: 80%;
-        height: 80%;
-        margin: 0 auto;
-        padding: .5em 0;
-    }
-
-    footer{
-        width: 100% !important;
+        width: 100%;
+        height: 100%;
     }
 }

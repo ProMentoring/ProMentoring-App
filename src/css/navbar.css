@@ -12,9 +12,9 @@ body {
 }
 
 header {
-    padding: 10px;
     margin: 0;
     background-color: #124e73;
+    width: 100%;
 }
 
 section {
