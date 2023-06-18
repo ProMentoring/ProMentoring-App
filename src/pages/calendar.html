@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="../css/calendar.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/reviews.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/reviews.css"> -->
     <title>Calendario</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class=" navbar container-row">
+            <div class="navbar container-row">
                 <div class="logo">
                     <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
                         <img src="../assets/logo.png" alt="PROMENTORING">
@@ -37,36 +37,33 @@
         </nav>
     </header>
     <br>
-    <div class="calendar">
-        <div class="calendar__info">
-            <div class="calendar_container_year">
-                <div class="calendar__prev" id="prev-month-year">&#9664;</div>
-                <div class="calendar__year" id="year"></div>
-                <div class="calendar__next" id="next-month-year">&#9654;</div>
+    <section>
+        <div class="calendar">
+            <div class="calendar__info">
+                <div class="calendar_container_year">
+                    <div class="calendar__prev" id="prev-month-year">&#9664;</div>
+                    <div class="calendar__year" id="year"></div>
+                    <div class="calendar__next" id="next-month-year">&#9654;</div>
+                </div>
+                <div class="calendar_container_month">
+                    <div class="calendar__prev" id="prev-month">&#9664;</div>
+                    <div class="calendar__month" id="month"></div>
+                    <div class="calendar__next" id="next-month">&#9654;</div>
+                </div>
             </div>
-            <div class="calendar_container_month">
-                <div class="calendar__prev" id="prev-month">&#9664;</div>
-                <div class="calendar__month" id="month"></div>
-                <div class="calendar__next" id="next-month">&#9654;</div>
+            <div class="calendar__week">
+                <div class="calendar__day calendar__item">Lunes</div>
+                <div class="calendar__day calendar__item">Martes</div>
+                <div class="calendar__day calendar__item">Miércoles</div>
+                <div class="calendar__day calendar__item">Jueves</div>
+                <div class="calendar__day calendar__item">Viernes</div>
+                <div class="calendar__day calendar__item">Sábado</div>
+                <div class="calendar__day calendar__item">Domingo</div>
             </div>
-            <!-- <div class="calendar__prev" id="prev-month">&#9664;</div>
-            <div class="calendar__month" id="month"></div>
-            <div class="calendar__year" id="year"></div>
-            <div class="calendar__next" id="next-month">&#9654;</div> -->
-        </div>
 
-        <div class="calendar__week">
-            <div class="calendar__day calendar__item">Lunes</div>
-            <div class="calendar__day calendar__item">Martes</div>
-            <div class="calendar__day calendar__item">Miércoles</div>
-            <div class="calendar__day calendar__item">Jueves</div>
-            <div class="calendar__day calendar__item">Viernes</div>
-            <div class="calendar__day calendar__item">Sábado</div>
-            <div class="calendar__day calendar__item">Domingo</div>
+            <div class="calendar__dates" id="dates"></div>
         </div>
-
-        <div class="calendar__dates" id="dates"></div>
-    </div>
+    </section>
     <br>
     <footer>
         <div id="container-bottom-items">
