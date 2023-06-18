@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reviews.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <script src="https://kit.fontawesome.com/abeb8ceaf0.js" crossorigin="anonymous"></script>
     <title>Perfil Mentor</title>
@@ -14,21 +15,23 @@
 <body>
     <header>
         <nav>
-            <div id="navbar-left">
-                <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
-                    <img src="../assets/logo.png" alt="PROMENTORING">
+            <div class="navbar container-row">
+                <div class="logo">
+                    <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
+                        <img src="../assets/logo.png" alt="PROMENTORING" id="logo">
+                    </a>
 
                     <h1>Promentoring</h1>
-                </a>
-            </div>
-            <div id="navbar-right">
-                <a id="busqueda-link">Busqueda</a>
-                <a id="sesion-link">Mentorias</a>
-                <a id="calendar-link">Calendarios</a>
-                <a id="profile-link">Mi perfil</a>
-                <div id="items-profile">
-                    <img id="user-profile" src="../assets/profile.jpg" alt="PROFILE">
-                    <i class="fa-solid fa-caret-down" style="color: #595959;"></i>
+                </div>
+                <div class="pages-indixes">
+                    <a id="busqueda-link">Busqueda</a>
+                    <a id="sesion-link">Mentorias</a>
+                    <a id="calendar-link">Calendarios</a>
+                    <div id="items-profile">
+                        <a id="profile-link">Mi perfil</a>
+                        <img id="user-profile" src="../assets/profile.jpg" alt="PROFILE">
+                        <i class="fa-solid fa-caret-down" style="color: #595959;"></i>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -71,9 +74,9 @@
                     para aplicaciones web</p>
             </div> -->
         </div>
-        <div id ="container-apply">
-            <a href="payments.html">
-                <button id ="apply-now">Aplicar ahora</button>
+        <div id="container-apply">
+            <a id="payments-link">
+                <button id="apply-now">Aplicar ahora</button>
             </a>
         </div>
     </section>

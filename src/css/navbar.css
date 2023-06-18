@@ -7,6 +7,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Bahnschrift;
+
 }
 
 header {
@@ -69,7 +71,7 @@ a {
 }
 
 .pages-indixes {
-    width: 40%;
+    width: 45%;
     color: white;
     display: flex;
     justify-content: space-around;
