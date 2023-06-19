@@ -1,0 +1,69 @@
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#container-inputs{
+    display: flex;
+    justify-content: space-around;
+}
+
+#mentor_list{
+    width: 250px;
+    height: 30px;
+    padding: 0px 10px;
+    text-transform: capitalize;
+}
+
+.input-subject{
+    width: 250px;
+    height: 20px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border-color: rgb(151, 151, 151);
+    border-radius: 10px;
+    border-style: solid;
+}
+
+#container-commit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#Textarea{
+    width: auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(153, 153, 153);
+}
+
+#send-review{
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    background-color: #3E5DCC;
+    color: #fff;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #3E5DCC;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+#send-review:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background-color: #2d50cf;
+    border-color: #2d50cf;
+}

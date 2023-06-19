@@ -104,6 +104,23 @@ section {
 }
 
 .calendar__last-days {
+    opacity: .3; 
+}
+
+.calendar_days{
+    background-color: #ffff;
+    width: 40px;
+    height: 20px;
+    border: 0px;
+}
+
+#today{
+    background-color: lightcoral;
+}
+
+.calendar_days:hover{
+    cursor: pointer;
+    scale: 1.2;
     opacity: .3;
 }
 

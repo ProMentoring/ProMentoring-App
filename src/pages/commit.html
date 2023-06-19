@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reviews.css">
+    <link rel="stylesheet" href="../css/commit.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navbar-left">
+                <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
+                    <img src="../assets/logo.png" alt="PROMENTORING">
+
+                    <h1>Promentoring</h1>
+                </a>
+            </div>
+            <div id="navbar-right">
+                <a href="busqueda.html">Busqueda</a>
+                <a href="sesion.html">Mentorias</a>
+                <a href="">Calendarios</a>
+                <a href="">Mi perfil</a>
+                <div id="items-profile">
+                    <img id="user-profile" src="../assets/profile.jpg" alt="PROFILE">
+                    <i class="fa-solid fa-caret-down" style="color: #595959;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>REALICE UNA RESEÑA SOBRE SU MENTORIA</h1>
+        <form id="form-commit" method="PUT">
+            <div id ="container-inputs">
+                <div class="container-input">
+                <p>NOMBRE DEL TUTOR</p>
+                <select id ="mentor_list">
+                    <option class="mentors" value="">Seleccione mentor</option>
+                </select>
+                </div>
+                <div class="container-input">
+                    <p>NOMBRE DEL USUARIO</p>
+                    <input type="text" class ="input-subject">
+                </div>
+                <div class="container-input">
+                    <p>APELLIDO DEL USUARIO</p>
+                    <input type="text" class ="input-subject">
+                </div>
+            </div>
+            <div id="container-commit">
+                <p>COMENTARIO</p>
+                <textarea id="Textarea" cols="150" rows="10"></textarea>
+            </div>
+            <div id ="container">
+                <input type="" id="send-review" value="ENVIAR RESEÑA">
+            </div>
+        </form>
+    </section>
+</body>
+<script src="../js/commit.js"></script>
+</html>

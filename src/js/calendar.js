@@ -39,12 +39,11 @@ const writeMonth = (month) => {
             ${getTotalDays(monthNumber - 1) - (i - 1)}
         </div>`;
     }
-
-    for (let i = 1; i <= getTotalDays(month); i++) {
-        if (i === currentDay) {
-            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today">${i}</div>`;
-        } else {
-            dates.innerHTML += ` <div class="calendar__date calendar__item">${i}</div>`;
+    for(let i=1; i<=getTotalDays(month); i++){
+        if(i===currentDay) {
+            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today"><button class="calendar_days" id="today">${i}</button></div>`;
+        }else{
+            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__actually"><button class="calendar_days">${i}</button></div>`;
         }
     }
 }

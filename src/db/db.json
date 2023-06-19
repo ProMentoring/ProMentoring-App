@@ -107,6 +107,11 @@
           "name": "Ana Maria",
           "lastname": "Silva Marquiño",
           "review": "La mentoría de programación con el profesor superó todas mis expectativas. Sus explicaciones claras y ejemplos prácticos me ayudaron a comprender los conceptos de programación de una manera mucho más profunda. Su pasión por la materia y su compromiso con nuestros éxitos individuales nos motivó a todos a esforzarnos y superar nuestros límites. Sin duda, recomendaría esta mentoría a cualquier persona que esté buscando mejorar sus habilidades en programación y desee contar con el apoyo de un mentor experimentado."
+        },
+        {
+          "name": "Renzo Andree",
+          "lastname": "Espíritu Cueva",
+          "review": "Una de las cualidades más destacadas de este mentor es su capacidad para explicar conceptos complejos de manera clara y concisa. Utiliza un enfoque didáctico y estructurado que permite a los estudiantes comprender y asimilar fácilmente los temas más desafiantes. Además, se asegura de adaptar su estilo de enseñanza a las necesidades individuales de cada estudiante, brindando explicaciones adicionales cuando sea necesario y fomentando un ambiente de preguntas y respuestas para fomentar la comprensión profunda."
         }
       ],
       "price": "80",
@@ -171,6 +176,13 @@
         "Angular",
         "JavaScript"
       ],
+      "Reseñas": [
+        {
+          "name": "Ana Maria",
+          "lastname": "Coronel Ramos",
+          "review": "Su compromiso y entusiasmo por la programación son notables en cada interacción con sus estudiantes. Su enfoque educativo es sobresaliente, combinando hábilmente sus conocimientos técnicos con su habilidad para transmitirlos de manera clara y comprensible. Su empatía y paciencia son destacables, ya que se toma el tiempo necesario para comprender las necesidades individuales de cada estudiante y adapta su enfoque de enseñanza en consecuencia. Además de su experiencia técnica, la mentora también se preocupa por el desarrollo personal y profesional de sus estudiantes, brindando orientación y apoyo en áreas como la solución de problemas, la comunicación efectiva y el trabajo en equipo. Su dedicación al éxito de sus estudiantes se refleja en su disponibilidad para responder preguntas, brindar retroalimentación constructiva y proporcionar recursos adicionales. En resumen, la guía de programación en línea es una líder ejemplar y una fuente inigualable de inspiración, cuyo impacto en la vida y carrera de sus estudiantes es invaluabre."
+        }
+      ],
       "price": "50",
       "modalities": [
         "Grupal"
@@ -194,6 +206,18 @@
         "SQL",
         "Node",
         "Html"
+      ],
+      "Reseñas": [
+        {
+          "name": "Carlos Alonso",
+          "lastname": "Pereira Gong",
+          "review": "Su pasión por la programación es contagiosa y su habilidad para transmitir conocimientos complejos de manera clara y concisa es excepcional. Su enfoque didáctico y estructurado brinda a los estudiantes una base sólida para comprender los conceptos más desafiantes. Además, su paciencia y empatía crean un ambiente de aprendizaje seguro y acogedor, donde cada estudiante se siente valorado y apoyado. No solo se limita a enseñar habilidades técnicas, sino que también fomenta el crecimiento personal y profesional, guiando a los estudiantes en su desarrollo de habilidades blandas y proporcionando recursos adicionales para ampliar su conocimiento. En resumen, el mentor de programación en línea es un guía excepcional, cuyo compromiso y dedicación son invaluables para aquellos que desean embarcarse en el emocionante viaje de la programación."
+        },
+        {
+          "name": "Jordi Alonso",
+          "lastname": "Santi Vega",
+          "review": "El mentor de programación que he tenido el privilegio de tener en mis clases en línea ha sido una verdadera joya en mi camino de aprendizaje. Su dedicación, conocimiento y pasión por la enseñanza son simplemente excepcionales. Desde el primer momento en que me uní a su programa, supe que estaba en buenas manos.\n\nLo que realmente destaca de este mentor es su habilidad para transmitir conceptos complejos de una manera clara y comprensible. A través de sus explicaciones detalladas, ejemplos prácticos y ejercicios desafiantes, logra llevar incluso los temas más difíciles a un nivel accesible para todos. Su enfoque práctico y basado en proyectos me ha permitido aplicar de inmediato lo que he aprendido, fortaleciendo así mis habilidades de programación."
+        }
       ],
       "price": "60",
       "modalities": [
