@@ -286,5 +286,31 @@
       "id": 10,
       "php": "fa-php"
     }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "C++"
+    },
+    {
+      "id": 2,
+      "name": "JavaScript"
+    },
+    {
+      "id": 3,
+      "name": "Python"
+    },
+    {
+      "id": 4,
+      "name": "SQL"
+    },
+    {
+      "id": 5,
+      "name": "Dart"
+    },
+    {
+      "id": 6,
+      "name": "Flutter"
+    }
   ]
 }

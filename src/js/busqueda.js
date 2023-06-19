@@ -1,6 +1,6 @@
 // Variables globales de los objetos 
+const skillsSelect = document.getElementById("skillsFilter");
 const mentorsList = document.getElementById("mentorsList");
-const checkboxGroup = document.querySelectorAll(".checkbox-group input[type='checkbox']");
 const precioMenorInput = document.querySelector("#precio-menor");
 const precioMayorInput = document.querySelector("#precio-mayor");
 
@@ -15,6 +15,43 @@ precioMayorInput.addEventListener("input", () => fetchMentors());
 
 const selectedFilters = [];
 let mentors = [];
+
+// Cargar las categorías al cargar la página
+window.addEventListener("DOMContentLoaded", () => {
+  loadSkills();
+});
+
+// Cargar las categorías desde la API
+const loadSkills = () => {
+  fetch("http://localhost:3000/skills")
+    .then((response) => response.json())
+    .then((data) => {
+      const skills = data;
+      skills.forEach((skill) => {
+        const div = document.createElement("div");
+        div.classList.add("elemento");
+
+        const input = document.createElement("input"); 
+        input.type = "checkbox";
+        input.value = skill.name.toLowerCase();
+        input.id = skill.name.toLowerCase();
+
+        const label = document.createElement("label");
+        label.textContent = skill.name;
+
+        div.appendChild(input);
+        div.appendChild(label);
+
+        skillsSelect.appendChild(div);
+      });
+      // Obtiene las skills de los mentores y añade el evento change al dar click
+      addCheckboxEventListener();
+
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+};
 
 const fetchMentors = () => {
   fetch("http://localhost:3000/mentors")
@@ -115,13 +152,16 @@ const filterMentorsAndShow = () => {
 }
 
 const addCheckboxEventListener = () => {
-  checkboxGroup.forEach(checkbox => {
+  // Agregar evento change para capturar las opciones seleccionadas
+  const checkboxes = skillsSelect.querySelectorAll("input[type='checkbox']");
+
+  checkboxes.forEach(checkbox => {
     checkbox.addEventListener("change", () => {
       // Si el checkbox está seleccionado, se agrega a la lista de filtros seleccionados
       if (checkbox.checked) {
         selectedFilters.push(checkbox.value);
+
       }
-      // Si el checkbox se deselecciona, se remueve de la lista de filtros seleccionados
       else {
         const index = selectedFilters.indexOf(checkbox.value);
         selectedFilters.splice(index, 1);
@@ -175,5 +215,4 @@ profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
   + "&rol=" + encodeURIComponent(type);
 
 // Funciones para agregar eventos
-addCheckboxEventListener();
 addClickEventToMentors();
