@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/calendar.css">
-    <link rel="stylesheet" type="text/css" href="../css/reviews.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/reviews.css"> -->
     <title>Calendario</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <div id="navbar-left">
-                <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
-                    <img src="../assets/logo.png" alt="PROMENTORING">
+            <div class="navbar container-row">
+                <div class="logo">
+                    <a id="container-left-items" href="../../../ProMentoring-Landing-Page/src/index.html">
+                        <img src="../assets/logo.png" alt="PROMENTORING">
+                    </a>
 
                     <h1>Promentoring</h1>
-                </a>
-            </div>
-            <div id="navbar-right">
-                <a href="busqueda.html">Busqueda</a>
-                <a href="sesion.html">Mentorias</a>
-                <a href="">Calendarios</a>
-                <a href="">Mi perfil</a>
-                <div id="items-profile">
-                    <img id="user-profile" src="../assets/profile.jpg" alt="PROFILE">
-                    <i class="fa-solid fa-caret-down" style="color: #595959;"></i>
+                </div>
+                <div class="pages-indixes">
+                    <a id="busqueda-link">Busqueda </a>
+                    <a id="sesion-link">Mentorias</a>
+                    <a href="">Calendarios</a>
+                    <div id="items-profile">
+                        <a id="profile-link">Mi perfil</a>
+                        <img id="user-profile" src="../assets/profile.jpg" alt="PROFILE">
+                        <i class="fa-solid fa-caret-down" style="color: #595959;"></i>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <br>
-    <div class="calendar">
-        <div class="calendar__info">
-            <div class="calendar_container_year">
-                <div class="calendar__prev" id="prev-month-year">&#9664;</div>
-                <div class="calendar__year" id="year"></div>
-                <div class="calendar__next" id="next-month-year">&#9654;</div>
+    <section>
+        <div class="calendar">
+            <div class="calendar__info">
+                <div class="calendar_container_year">
+                    <div class="calendar__prev" id="prev-month-year">&#9664;</div>
+                    <div class="calendar__year" id="year"></div>
+                    <div class="calendar__next" id="next-month-year">&#9654;</div>
+                </div>
+                <div class="calendar_container_month">
+                    <div class="calendar__prev" id="prev-month">&#9664;</div>
+                    <div class="calendar__month" id="month"></div>
+                    <div class="calendar__next" id="next-month">&#9654;</div>
+                </div>
             </div>
-            <div class="calendar_container_month">
-                <div class="calendar__prev" id="prev-month">&#9664;</div>
-                <div class="calendar__month" id="month"></div>
-                <div class="calendar__next" id="next-month">&#9654;</div>
+            <div class="calendar__week">
+                <div class="calendar__day calendar__item">Lunes</div>
+                <div class="calendar__day calendar__item">Martes</div>
+                <div class="calendar__day calendar__item">Miércoles</div>
+                <div class="calendar__day calendar__item">Jueves</div>
+                <div class="calendar__day calendar__item">Viernes</div>
+                <div class="calendar__day calendar__item">Sábado</div>
+                <div class="calendar__day calendar__item">Domingo</div>
+            </div>
+
+            <div class="calendar__dates" id="dates"></div>
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div id="container-bottom-items">
+            <div id="box-logo">
+                <img src="../assets/logo.png" alt="LOGO">
+                <h1>ProMentoring</h1>
+            </div>
+            <div id="container-options">
+                <div class="container-columns">
+                    <h3>Nosotros</h3>
+                    <a href="">Acerca de</a>
+                    <a href="">Contactos</a>
+                    <a href="">Servicios</a>
+                    <a href="">Socios</a>
+                </div>
+                <div class="container-columns">
+                    <h3>Comunidades</h3>
+                    <a href="">Estudiantes</a>
+                    <a href="">Mentores</a>
+                    <a href="">Publicidad</a>
+                    <a href="">Tutoriales</a>
+                </div>
+                <div class="container-columns">
+                    <h3>Ayuda</h3>
+                    <a href="">Soporte</a>
+                    <a href="">Términos de servicio</a>
+                </div>
+            </div>
+            <div id="iconos">
+                <a href=""><img src="../assets/fb-krita.png" width="40px" height="40px" alt="FACEBOOK"></a>
+                <a href=""><img src="../assets/yt-krita.png" width="40px" height="40px" alt="YOUTUBE"></a>
+                <a href=""><img src="../assets/instagram-krita.png" width="40px" height="35px" alt="INSTAGRAM"></a>
+                <a href=""><img src="../assets/telegram-krita.png" width="40px" height="40px" alt="TELEGRAM"></a>
             </div>
         </div>
-    
-        <div class="calendar__week">
-            <div class="calendar__day calendar__item">Lunes</div>
-            <div class="calendar__day calendar__item">Martes</div>
-            <div class="calendar__day calendar__item">Miércoles</div>
-            <div class="calendar__day calendar__item">Jueves</div>
-            <div class="calendar__day calendar__item">Viernes</div>
-            <div class="calendar__day calendar__item">Sábado</div>
-            <div class="calendar__day calendar__item">Domingo</div>
+        <div id="footer-bottom">
+            <div id="container-conditions">
+                <a href="">Políticas de privacidad</a>
+                <a href="">Términos de uso</a>
+                <a href="">Cookies</a>
+                <a href="">Legal</a>
+            </div>
+            <span>&copy; 2023 ProMentoring. Todos los derechos reservados</span>
         </div>
-        
-        <div class="calendar__dates" id="dates"></div>
-    </div>
+    </footer>
 </body>
 <script src="../js/calendar.js"></script>
-<script src="../js/hours.js"></script>
 </html>

@@ -6,6 +6,7 @@ const precioMayorInput = document.querySelector("#precio-mayor");
 
 // Variables para el link a cada pagina
 const sesionLink = document.getElementById('sesion-link');
+const calendarLink = document.getElementById('calendar-link');
 const profileLink = document.getElementById('profile-link');
 
 // Variables globales para el forms
@@ -135,7 +136,9 @@ const redirectToMentorPage = (mentorArticle) => {
   // Se obtiene el nombre del mentor del elemento h3 dentro del artículo
   const mentorName = mentorArticle.querySelector("h3").textContent;
   // Redirige a la página del mentor pasando su nombre como parámetro en la URL
-  window.location.href = `reviews.html?name=${encodeURIComponent(mentorName)}`;
+  window.location.href = "reviews.html" + "?name=" + encodeURIComponent(mentorName) +
+    "&user=" + encodeURIComponent(user) +
+    "&rol=" + encodeURIComponent(type);
 };
 
 const addClickEventToMentors = () => {
@@ -159,14 +162,17 @@ let type = urlParams.get("rol");
 console.log("Usuario: " + user);
 console.log("Type: " + type);
 
-// Funcion de enviar data a la pagina de busqueda
+// Funcion de enviar data a la pagina sesion
 sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
   + "&rol=" + encodeURIComponent(type);
 
-// Funcion de enviar data a la pagina sesion
-profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
+// Funcion de enviar data a la pagina calendario
+calendarLink.href = "calendar.html" + "?user=" + encodeURIComponent(user)
   + "&rol=" + encodeURIComponent(type);
 
+// Funcion de enviar data a la pagina de perfil
+profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
+  + "&rol=" + encodeURIComponent(type);
 
 // Funciones para agregar eventos
 addCheckboxEventListener();

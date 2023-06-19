@@ -7,12 +7,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Bahnschrift;
+
 }
 
 header {
-    padding: 10px;
     margin: 0;
     background-color: #124e73;
+    width: 100%;
 }
 
 section {
@@ -69,7 +71,7 @@ a {
 }
 
 .pages-indixes {
-    width: 40%;
+    width: 45%;
     color: white;
     display: flex;
     justify-content: space-around;

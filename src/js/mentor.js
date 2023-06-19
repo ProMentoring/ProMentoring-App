@@ -1,29 +1,33 @@
-/* Almacenamiento de etiquetas */
+// Almacenamiento de etiquetas 
 const mentorDivImg = document.getElementById("mentor");
 const mentorDivDescription = document.getElementById("presentación-mentor");
 const reviewsDiv = document.getElementById("container-reviews");
-/* Captura del nombre del mentor */
-const nameCapture = decodeURI(window.location.search);
-let nameFilter = nameCapture.substr(6);
+
+// Variables para el link a cada pagina
+const busquedaLinked = document.getElementById('busqueda-link');
+const sesionLinked = document.getElementById('sesion-link');
+const calendarLinked = document.getElementById('calendar-link');
+const profileLinked = document.getElementById('profile-link');
+const paymentLinked = document.getElementById('payments-link');
 
 
 let mentores = [];
 var auxiliar;
 
-const getMentors=()=>{
+const getMentors = () => {
     fetch("http://localhost:3000/mentors")
-    .then(response=>response.json())
-    .then(data=>{
-        mentores=data;
-        console.log(mentores);
-        viewMentor();
-    })
-    .catch(err=>console.error("Error",error));
+        .then(response => response.json())
+        .then(data => {
+            mentores = data;
+            console.log(mentores);
+            viewMentor();
+        })
+        .catch(err => console.error("Error", err));
 }
 
-const viewMentor=()=>{
-    const mentorView = mentores.find((m)=>m.names == nameFilter);
-    auxiliar=mentorView;
+const viewMentor = () => {
+    const mentorView = mentores.find((m) => m.names === nameCapture);
+    auxiliar = mentorView;
     console.log(mentorView);
     /* Carga de photo del mentor*/
     const img = document.createElement("img");
@@ -65,5 +69,35 @@ const viewMentor=()=>{
         reviewsDiv.appendChild(containerReview);
     });
 }
+//--- Ejecucion 
+
+// Leer los valores de usuario de la URL
+let urlParams = new URLSearchParams(window.location.search);
+let user = urlParams.get("user");
+let type = urlParams.get("rol");
+let nameCapture = urlParams.get("name");
+console.log("name: " + nameCapture);
+console.log("Usuario: " + user);
+console.log("Type: " + type);
+
+// Funcion de enviar data a la pagina busqueda
+busquedaLinked.href = "busqueda.html" + "?user=" + encodeURIComponent(user)
+    + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina sesion
+sesionLinked.href = "sesion.html" + "?user=" + encodeURIComponent(user)
+    + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina calendario
+calendarLinked.href = "calendar.html" + "?user=" + encodeURIComponent(user)
+    + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina de perfil
+profileLinked.href = "profile.html" + "?user=" + encodeURIComponent(user)
+    + "&rol=" + encodeURIComponent(type);
+
+// Funcion de enviar data a la pagina de perfil
+paymentLinked.href = "payments.html" + "?user=" + encodeURIComponent(user)
+    + "&rol=" + encodeURIComponent(type);
 
 getMentors();

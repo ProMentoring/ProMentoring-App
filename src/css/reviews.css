@@ -1,9 +1,6 @@
-body{
-    margin:0px
-}
 section{
     margin-right: 100px;
-    margin-left: 100px;
+    margin-left: 100px; 
 }
 /* DISEÑO AL ENCABEZADO */
 header{
@@ -15,63 +12,31 @@ header{
 nav{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
 }
 
 nav h1,#navbar-right a{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-decoration: none;
     color: #fff;
 }
 
-#navbar-left{
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container-left-items{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap:10px;
-}
-
-#navbar-left>img{
-    width: 50px;
-    height: 50px;
-}
-
 #items-profile{
     display: flex;
     align-items: center;
-    gap:2px;
 }
 
 #items-profile:hover{
     cursor: pointer;
 }
 
-#navbar-right{
-    width: 450px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap:8px;
-}
-
-#navbar-right a:hover{
-    scale: 1.05;
-    color: #646464;
-}
-
 #user-profile{
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 50%;
+    padding-left: 5px;
+}
+.pages-indixes{
+    align-items: center;
 }
 /* DISEÑO AL CUERPO*/
 /* Presentación del mentor  */
@@ -90,9 +55,10 @@ nav h1,#navbar-right a{
 }
 
 #presentación-mentor{
-    width: 60%;
+    width: 100%;
     height: 100%;
     margin-top: 50px;
+    text-align: justify;
 }
 
 #photo-mentor{
@@ -150,15 +116,42 @@ nav h1,#navbar-right a{
     }
 }
 
-@media (max-width: 799px){
-    #navbar-right > a{
-        font-size: 15px;
+/* Media Query para pantallas de hasta 800px de ancho */
+@media (max-width: 800px) {
+
+    nav .container-row {
+         flex-direction: column;
+         flex-wrap: wrap;
+         min-width: 100%;
     }
 
-    #navbar-left{
-        width: auto;
-        margin: 0 5px;
+    .navbar {
+         width: 100% !important;
     }
+
+    .logo {
+         min-width: 100%;
+         margin-bottom: 10px;
+         justify-content: center !important;
+    }
+
+    .pages-indixes {
+         width: 100% !important;
+         margin-bottom: 10px;
+    }
+
+    h2{
+         text-align: center;
+    }
+    section{
+        margin: 0 50px;
+    }
+    footer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 799px){
     section{
         margin: 0 5px;
     }
@@ -179,11 +172,5 @@ nav h1,#navbar-right a{
         width: 100%;
         padding: 10px 0;
         margin: 0px 10px;
-    }
-}
-
-@media (min-width:800px) and (max-width: 1024px){
-    section{
-        margin: 0 50px;
     }
 }
