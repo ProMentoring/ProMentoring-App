@@ -1,26 +1,61 @@
-h1{
+h1 {
     font-size: 30px;
     text-align: center;
 }
 
-p{
+p {
     font-size: 15px;
     margin-bottom: 5px;
 }
 
-#container-inputs{
+section {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+/* DISEÑO AL ENCABEZADO */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #124E73;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+nav h1,
+
+#items-profile {
+    display: flex;
+    align-items: center;
+}
+
+#items-profile:hover {
+    cursor: pointer;
+}
+
+#user-profile {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+
+#container-inputs {
     display: flex;
     justify-content: space-around;
 }
 
-#mentor_list{
+#mentor_list {
     width: 250px;
     height: 30px;
     padding: 0px 10px;
     text-transform: capitalize;
 }
 
-.input-subject{
+.input-subject {
     width: 250px;
     height: 20px;
     padding: 5px 10px;
@@ -30,21 +65,21 @@ p{
     border-style: solid;
 }
 
-#container-commit{
+#container-commit {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0;
 }
 
-#Textarea{
+#Textarea {
     width: auto;
     border-radius: 10px;
     border-style: solid;
     border-color: rgb(153, 153, 153);
 }
 
-#send-review{
+#send-review {
     text-align: center;
     width: 150px;
     height: 20px;
@@ -56,12 +91,12 @@ p{
     border-color: #3E5DCC;
 }
 
-#container{
+#container {
     display: flex;
     justify-content: center;
 }
 
-#send-review:hover{
+#send-review:hover {
     scale: 1.1;
     cursor: pointer;
     background-color: #2d50cf;
