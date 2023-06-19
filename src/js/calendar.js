@@ -176,4 +176,5 @@ sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
 // Funcion de enviar data a la pagina perfil
 profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
     + "&rol=" + encodeURIComponent(type);
+    
 writeMonth(monthNumber);
