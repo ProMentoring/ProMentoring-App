@@ -35,9 +35,9 @@ const writeMonth = (month) => {
 
     for(let i=1; i<=getTotalDays(month); i++){
         if(i===currentDay) {
-            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today">${i}</div>`;
+            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today"><button class="calendar_days" id="today">${i}</button></div>`;
         }else{
-            dates.innerHTML += ` <div class="calendar__date calendar__item">${i}</div>`;
+            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__actually"><button class="calendar_days">${i}</button></div>`;
         }
     }
 }
