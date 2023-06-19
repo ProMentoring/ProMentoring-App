@@ -10,8 +10,9 @@
       <title>Videoconferencia</title>
 </head>
 <script src="https://kit.fontawesome.com/c9c206d8a8.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/abeb8ceaf0.js" crossorigin="anonymous"></script>
 
-<body>
+<body id="pruebas">
       <header>
             <nav>
                   <div class="navbar container-row">
@@ -44,17 +45,52 @@
                         <div class="screen-image">
                               <img src="../assets/screen/share.png" alt="screen">
                               <div id="options" class="container-row">
-                                    <a> <i class="fa-solid fa-microphone-lines-slash fa-lg"></i></a>
-                                    <a> <i class="fa-solid fa-video fa-lg"></i></a>
-                                    <a> <i class="fa-solid fa-share-from-square fa-lg"></i></a>
+                                    <a id = "microphone" > <i id="icon-microphone" class="fa-solid fa-microphone-lines-slash fa-lg"></i></a>
+                                    <a id = "camera" > <i id="icon-camera" class="fa-solid fa-video fa-lg"></i></a>
+                                    <a id = "share-option"> <i id="icon-share" class="fa-solid fa-share-from-square fa-lg"></i></a>
+                                    <a id = "exit-door"><i class="fa-solid fa-door-open fa-lg"></i></a>
                               </div>
                         </div>
                   </div>
 
             </div>
       </section>
+      <div id="lightbox">
+            <div id="lightbox-content">
+                  <p>La sesión de su mentoría ha finalizado, ¿Desea descagar la grabación en su computadora?</p>
+                  <div id="container-buttons">
+                        <button class="buttons-contein" id="download">Descargar</button>
+                        <button class="buttons-contein" id="exit">Salir</button>
+                  </div>
+            </div>
+      </div>
 
+      <div id ="container-resources">
+            <div id="container-auxiliar">
+                  <div id="container-items">
+                        <div class="container-documents">
+                              <p>LISTA DE DOCUMENTOS</p>
+                              <a href="">Documento Word</a>
+                              <a href="">Documento Word</a>
+                              <a href="">Documento Word</a>
+                              <a href="">Documento PDF</a>
+                              <a href="">Documento PDF</a>
+                        </div>
+                        <div class="container-documents">
+                              <p>LISTA DE VIDEO REFERENCIALES</p>
+                              <a href="">Video Referencial</a>
+                              <a href="">Video Referencial</a>
+                              <a href="">Video Referencial</a>
+                              <a href="">Video Referencial</a>
+                        </div>
+                  </div>
+                  <div id="container-button">
+                        <button id="close-window">CERRAR</button>
+                  </div>
+            </div>
+      </div>
 </body>
+<script src="../js/toolsvideo.js"></script>
 <script src="../js/video.js"></script>
 
 </html>
