@@ -2,6 +2,7 @@
 const busquedaLink = document.getElementById('busqueda-link');
 const calendarLink = document.getElementById('calendar-link');
 const profileLink = document.getElementById('profile-link');
+const videoLink = document.getElementById('videoconferencia1');
 
 // Leer los valores de usuario de la URL
 let urlParams = new URLSearchParams(window.location.search);
@@ -21,3 +22,6 @@ calendarLink.href = "calendar.html" + "?user=" + encodeURIComponent(user)
 // Funcion de enviar data a la pagina sesion
 profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
      + "&rol=" + encodeURIComponent(type);
+
+videoLink.href = "video.html" + "?user=" + encodeURIComponent(user)
++ "&rol=" + encodeURIComponent(type);

@@ -1,0 +1,109 @@
+/* Estilos generales para la pagina */
+
+.pages-indixes a[id="sesion-link"] {
+      font-weight: bold;
+      color: #27acff;
+}
+
+.pages-indixes a[id="sesion-link"]:hover {
+      color: #70bae9;
+}
+
+section {
+      margin: 2%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Seccion de las camaras de los presentes */
+
+#cameras {
+      height: 100%;
+      width: 25%;
+      align-self: center;
+      align-items: center;
+      text-align: center;
+}
+
+#cameras img {
+      max-width: 70%;
+      max-height: 70%;
+      border-radius: 50%;
+      border-width: 2px;
+      border-style: double;
+      border-color: #333;
+      margin: 5%;
+}
+
+/* Seccion de los botones de la sesion */
+#screen {
+      position: relative;
+}
+
+.screen-image {
+      position: relative;
+      display: inline-block;
+}
+
+#options {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+}
+
+#screen:hover #options {
+      opacity: 1;
+}
+
+#options a {
+      margin: 5%;
+      margin-right: 10px;
+      border: none;
+      background-color: #ff000000;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+}
+
+
+
+#options {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#screen:hover #options {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+
+#options button:hover {
+      background-color: #aaa;
+      color: #504141;
+}
+
+.fa-solid {
+      display: inline-block;
+      margin-right: 5px;
+      color: black;
+}
+
+.fa-solid:hover {
+      display: inline-block;
+      margin-right: 5px;
+      color: rgb(255, 255, 255);
+}
+
+/* Seccion de las pantalla de los presentes */
+
+#screen img {
+      max-width: 100%;
+      max-height: 100%;
+}
