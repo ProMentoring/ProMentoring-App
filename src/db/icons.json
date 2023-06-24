@@ -1,0 +1,42 @@
+[
+      {
+            "id": 1,
+            "python": "fa-python"
+      },
+      {
+            "id": 2,
+            "node-js": "fa-node-js"
+      },
+      {
+            "id": 3,
+            "html": "fa-html5"
+      },
+      {
+            "id": 4,
+            "react": "fa-react"
+      },
+      {
+            "id": 5,
+            "angular": "fa-angular"
+      },
+      {
+            "id": 6,
+            "android": "fa-android"
+      },
+      {
+            "id": 7,
+            "swift": "fa-swift"
+      },
+      {
+            "id": 8,
+            "apple": "fa-apple"
+      },
+      {
+            "id": 9,
+            "database": "fa-database"
+      },
+      {
+            "id": 10,
+            "php": "fa-php"
+      }
+]
