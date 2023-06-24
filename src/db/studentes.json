@@ -1,0 +1,78 @@
+[
+      {
+            "id": 1,
+            "user": "gabe10",
+            "names": "Gabriel Esteban",
+            "lastname": "Gavilan Torres",
+            "password": "123",
+            "email": "gabe@gmail.com",
+            "career": "Ingenieria De Software",
+            "description": " No se",
+            "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+            "skills": [
+                  "Programación"
+            ]
+      },
+      {
+            "id": 2,
+            "user": "test123",
+            "names": "Alex ",
+            "lastname": "Merino Montaña",
+            "password": "12345",
+            "email": "test@gmail.com",
+            "career": "Ingenieria De Software",
+            "description": " Hola Mundo. :D",
+            "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+            "skills": [
+                  "Programación"
+            ]
+      },
+      {
+            "id": 3,
+            "user": "rodrigo321",
+            "names": "Rodrigo Simon",
+            "lastname": "Valtazar Ceres",
+            "password": "rodrigo123",
+            "email": "rodrigo@gmail.com",
+            "career": "Ciencias De La Computacion",
+            "description": " Testeando la biografia.",
+            "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+            "skills": [
+                  "Resolución De Problemas",
+                  "Trabajo En Equipo",
+                  "Aprendizaje Continuo"
+            ]
+      },
+      {
+            "id": 4,
+            "user": "pedritoNoPedrito",
+            "names": "Pedro Norman",
+            "lastname": "Cesares Zen",
+            "password": "123",
+            "email": "pedrito@gmail.com",
+            "career": "Ingenieria De Software",
+            "description": " Durante mi trayecto académico, he adquirido habilidades en varios lenguajes de programación como Java, Python y C++. Además, tengo experiencia en el desarrollo de aplicaciones web utilizando tecnologías como HTML, CSS y JavaScript. Estoy entusiasmado por aprender nuevas tecnologías y herramientas que me permitan crear soluciones innovadoras y eficientes.",
+            "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+            "skills": [
+                  "Programación",
+                  "Estructuras De Datos Y Algoritmos",
+                  "Desarrollo Web"
+            ]
+      },
+      {
+            "id": 5,
+            "user": "gabe03",
+            "names": "Lucia Maria",
+            "lastname": "Silva Maldonado",
+            "password": "123",
+            "email": "carlos@gmail.com",
+            "career": "Ciencias de la Computacion",
+            "description": "Soy una apasionada estudiante de Ciencias de la Computación en busca de desafíos y oportunidades para expandir mis conocimientos en el campo de la tecnología. Mi objetivo principal es adquirir una base sólida en los fundamentos de la programación y las ciencias de la computación, mientras me enfoco en el desarrollo de software y la resolución de problemas.",
+            "photo": "https://media.licdn.com/dms/image/C4D03AQHf6bMlJ3JRfA/profile-displayphoto-shrink_200_200/0/1519754279285?e=1691020800&v=beta&t=GNgoC6zjx6ecqqBbf65Q0BesRJy9c3eT3bVN9RJ22Tg",
+            "skills": [
+                  "Programación",
+                  "Estructuras De Datos Y Algoritmos",
+                  "Desarrollo Web"
+            ]
+      }
+]
