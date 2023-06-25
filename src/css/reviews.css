@@ -71,6 +71,17 @@ nav h1,#navbar-right a{
 #container-reviews{
     margin: 20px 0;
 }
+
+.container-header{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.stars{
+    color: yellow;
+}
+
 .reviews{
     border: 1px;
     border-color: gray;
