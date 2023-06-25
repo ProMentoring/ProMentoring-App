@@ -25,6 +25,16 @@ const getMentors = () => {
         .catch(err => console.error("Error", err));
 }
 
+function generateStars(DIV, score){
+    for(var i = 0; i < 5; ++i){
+        var star = document.createElement('i');
+        star.classList.add("fa-solid");
+        star.classList.add("fa-star");
+        if(i<score)star.classList.add("stars")
+        DIV.appendChild(star);
+    }
+}
+
 const viewMentor = () => {
     const mentorView = mentores.find((m) => m.names === nameCapture);
     auxiliar = mentorView;
@@ -54,16 +64,26 @@ const viewMentor = () => {
         /* Creación del contenedor de reseñas*/
         const containerReview = document.createElement("div");
         containerReview.classList.add("reviews");
+        /* Creación del encabezado de la reseña */
+        const containerHeader = document.createElement('div');
+        containerHeader.classList.add("container-header");
         /* Creación de autor de la reseña */
         const subDivH3 = document.createElement("h3");
         subDivH3.classList.add("name");
         subDivH3.textContent = review.name + " " + review.lastname;
+        /* Creación del contenedor de estrellas */
+        const containerStars = document.createElement('div');
+        containerStars.classList.add('container-stars');
+        generateStars(containerStars,review.score);
         /* Creación del contenido de la reñas */
         const subDivP = document.createElement("p");
         subDivP.classList.add("commit");
         subDivP.textContent = review.review;
-        /* Agregación al div contenedor de una reseña */
-        containerReview.appendChild(subDivH3);
+        /* Agregación al div contenedor del encabezado */
+        containerHeader.appendChild(subDivH3);
+        containerHeader.appendChild(containerStars);
+        /* Agregación al div contenedor de reseña */
+        containerReview.appendChild(containerHeader);
         containerReview.appendChild(subDivP);
         /* Agregación al div contenedor de las reseñas */
         reviewsDiv.appendChild(containerReview);

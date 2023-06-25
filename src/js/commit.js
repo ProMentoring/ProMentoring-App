@@ -7,7 +7,10 @@ const sesionLink = document.getElementById('sesion-link');
 const calendarLink = document.getElementById('calendar-link');
 const profileLink = document.getElementById('profile-link');
 
+//Obtención de parametros
+let urlparameters = new URLSearchParams(window.location.search);
 let mentores = [];
+let users = [];
 let objectMentor;
 let objectReview;
 
@@ -43,16 +46,35 @@ function getObjectMentor() {
             return mentores[i];
     }
 }
+const saveUsers=()=>{
+    fetch("http://localhost:3000/students")
+        .then(response => response.json())
+        .then(data => {
+            users=data;
+        })
+        .catch(err => console.error("Error", err));
+}
+
+function getUser(username){
+    saveUsers();
+    for(var i = 0; i < users.length; ++i){
+        if(users[i].user===username)return users[i];
+    }
+}
 
 inputReview.addEventListener("click", function (event) {
-    var getPerson = document.getElementsByClassName("input-subject");
-    var name = capitalizeInitials(getPerson[0].value);
-    var lastname = capitalizeInitials(getPerson[1].value);
+    var userData = getUser(urlparameters.get("user"));
+    console.log(userData.names + " " + userData.lastname);
+    var name = capitalizeInitials(userData.names);
+    var lastname = capitalizeInitials(userData.lastname);
+    var score = document.getElementById("score");
+    var note = Number(score.value);
     var commit = document.getElementById("Textarea").value;
     objectMentor = getObjectMentor();
     objectReview = {
         name: name,
         lastname: lastname,
+        score: note,
         review: commit
     };
     // console.log(objectReview);
