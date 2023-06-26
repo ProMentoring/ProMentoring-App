@@ -12,7 +12,7 @@
 /* Estilos de los botones de Iniciar Sesion con Facebook */
 
 #facebook-button {
-     background-color: #3b5998;
+     background-color: #0a66c2;
      color: #fff;
      padding: 10px 20px;
      border: none;
@@ -23,10 +23,6 @@
 
 #facebook-button:hover {
      background-color: #2d4373;
-}
-
-#facebook-button:active {
-     background-color: #192381;
 }
 
 /* Estilos de los botones de Iniciar Sesion con Google */

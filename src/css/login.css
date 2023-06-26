@@ -11,8 +11,8 @@
 
 /* Estilos de los botones de Iniciar Sesion con Facebook */
 
-#facebook-button {
-     background-color: #3b5998;
+#linkedin-button {
+     background-color: #0a66c2;
      color: #fff;
      padding: 10px 20px;
      border: none;
@@ -21,11 +21,11 @@
      font-size: 16px;
 }
 
-#facebook-button:hover {
+#linkedin-button:hover {
      background-color: #2d4373;
 }
 
-#facebook-button:active {
+#linkedin-button:active {
      background-color: #192381;
 }
 
@@ -135,9 +135,11 @@ input[type="password"]:hover {
      header .container-row {
           flex-direction: column;
      }
-     .navbar{
+
+     .navbar {
           width: 100% !important;
      }
+
      .logo {
           min-width: 100%;
           margin-bottom: 10px;
