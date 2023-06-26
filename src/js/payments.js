@@ -5,6 +5,12 @@ const year = document.getElementById("year");
 const cvv = document.getElementById("cvv");
 const send = document.getElementById("submit");
 const msg = document.getElementById("msg-submit");
+const buttons = [
+  document.getElementById("button1"),
+  document.getElementById("button2"),
+  document.getElementById("button3"),
+  document.getElementById("button4")
+];
 
 let cards=[];
 
@@ -17,6 +23,26 @@ const getCards=()=>{
     })
     .catch(err=>console.error("Error",error));
 }
+// Agrega otro estilo al boton si ha seleccionado como metodo de pago
+const addClickEventToTypePayment = () => {
+    console.log("AVERERERE");
+    console.log(buttons);
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if(button.classList.contains("seleccionado")){
+                this.classList.remove('seleccionado');
+                console.log("Seleccionando meotodo de pago");
+            }
+            else{
+                this.classList.add('seleccionado');
+                console.log("Quitando estilo de pago seleccionado");
+            } 
+            
+        });
+    });
+
+};
 
 send.addEventListener("click",()=>{
     const findCard = cards.find((c)=>c.number==cardNumber.value &&
@@ -53,3 +79,4 @@ console.log("Type: " + type);
 
 
 getCards();
+addClickEventToTypePayment();
