@@ -163,3 +163,7 @@ header>img{
         margin: 20px 80px;
     }
 }
+
+.seleccionado{
+    color: red;
+}
