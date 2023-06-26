@@ -33,16 +33,20 @@ prevYeatDOM.addEventListener('click', () => lastYear());
 nextYearDOM.addEventListener('click', () => nextYear());
 
 const writeMonth = (month) => {
+    dateHref = "sesion.html" + "?user=" + encodeURIComponent(user)
+        + "&rol=" + encodeURIComponent(type);
 
     for (let i = startDay(); i > 0; i--) {
+
+
         dates.innerHTML += ` <div class="calendar__date calendar__item calendar__last-days">
             ${getTotalDays(monthNumber - 1) - (i - 1)}
         </div>`;
     }
-    for(let i=1; i<=getTotalDays(month); i++){
-        if(i===currentDay) {
-            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today"><button class="calendar_days" id="today">${i}</button></div>`;
-        }else{
+    for (let i = 1; i <= getTotalDays(month); i++) {
+        if (i === currentDay) {
+            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today"><button class="calendar_days" id="today"> <a href="${dateHref}">${i}</a></button></div>`;
+        } else {
             dates.innerHTML += ` <div class="calendar__date calendar__item calendar__actually"><button class="calendar_days">${i}</button></div>`;
         }
     }
@@ -176,5 +180,5 @@ sesionLink.href = "sesion.html" + "?user=" + encodeURIComponent(user)
 // Funcion de enviar data a la pagina perfil
 profileLink.href = "profile.html" + "?user=" + encodeURIComponent(user)
     + "&rol=" + encodeURIComponent(type);
-    
+
 writeMonth(monthNumber);
